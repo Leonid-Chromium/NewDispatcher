@@ -15,3 +15,6 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Dispatcher.csproj.G
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Dispatcher.csproj.CoreCompileInputs.cache
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Dispatcher.exe
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Dispatcher.pdb
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TabControlUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TabControlUC.baml
