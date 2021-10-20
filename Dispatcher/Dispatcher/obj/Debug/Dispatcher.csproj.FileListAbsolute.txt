@@ -20,3 +20,5 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\GeneratedInternalTy
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TabControlUC.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\CalendarUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\CalendarUC.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\DistrictUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\DistrictUC.baml

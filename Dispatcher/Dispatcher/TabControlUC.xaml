@@ -18,7 +18,7 @@
 
         </TabItem>
         <TabItem Header="Участки">
-            
+            <local:DistrictUC/>
         </TabItem>
         <TabItem Header="Склад">
             <TabControl>
