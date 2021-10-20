@@ -18,3 +18,5 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Dispatcher.pdb
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TabControlUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TabControlUC.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\CalendarUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\CalendarUC.baml

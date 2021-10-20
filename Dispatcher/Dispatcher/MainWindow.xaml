@@ -15,6 +15,7 @@
             <RowDefinition/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
+        <local:CalendarUC x:Name="CalendarUC" Grid.Column="0" Grid.Row="0"/>
         <local:TabControlUC x:Name="TabSpace" Grid.Column="1" Grid.RowSpan="2"/>
         <Grid Grid.Column="0" Grid.Row="1" Margin="25">
             <Grid.ColumnDefinitions>

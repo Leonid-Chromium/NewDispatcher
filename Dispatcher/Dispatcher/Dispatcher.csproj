@@ -55,10 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CalendarUC.xaml.cs">
+      <DependentUpon>CalendarUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TabControlUC.xaml.cs">
       <DependentUpon>TabControlUC.xaml</DependentUpon>
     </Compile>
     <Page Include="AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CalendarUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
