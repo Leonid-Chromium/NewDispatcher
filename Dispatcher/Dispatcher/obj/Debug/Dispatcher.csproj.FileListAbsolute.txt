@@ -26,3 +26,5 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TestDataGridUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TestDataGridUC.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\SettingsUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\SettingsUC.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UnitsUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UnitsUC.baml

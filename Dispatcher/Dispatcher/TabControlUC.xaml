@@ -33,7 +33,7 @@
         <TabItem Header="Редакторы">
             <TabControl>
                 <TabItem Header="Единицы измерения">
-                    
+                    <local:UnitsUC/>
                 </TabItem>
                 <TabItem Header="Статусы персонала">
 
