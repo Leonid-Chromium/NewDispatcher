@@ -20,9 +20,31 @@ namespace Dispatcher
     /// </summary>
     public partial class UnitsUC : UserControl
     {
+        DispatcherEntities DataEntities = new DispatcherEntities();
+
         public UnitsUC()
         {
             InitializeComponent();
+        }
+
+        public void Update()
+        {
+            var query =
+            from Units in DataEntities.Units
+            orderby Units.ID
+            select new { Units.ID, Units.Name };
+
+            UnitsDataGrid.ItemsSource = query.ToList();
+        }
+
+        private void UnitsUC_Loaded(object sender, RoutedEventArgs e)
+        {
+            Update();
+        }
+
+        private void Upgrade_Click(object sender, RoutedEventArgs e)
+        {
+            Update();
         }
     }
 }

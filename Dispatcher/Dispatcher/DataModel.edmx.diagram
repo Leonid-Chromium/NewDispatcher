@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ab647127493f4740865cf1d62fbc092a" Name="Diagram1">
+        <EntityTypeShape EntityType="DispatcherModel.Batch" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.CertificateEquipment" Width="1.5" PointX="8.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.CertificateStuff" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.CertificationPeriod" Width="1.5" PointX="10.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Consumables" Width="1.5" PointX="11" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Device" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.District" Width="1.5" PointX="1.5" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Equipments" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.EquipmentStatus" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.MSL" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.OperationHistory" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.OperationMSL" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Post" Width="1.5" PointX="1.5" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.PostBinding" Width="1.5" PointX="1.5" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Roles" Width="1.5" PointX="10.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Rooms" Width="1.5" PointX="3.75" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Routing" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.StaffStatus" Width="1.5" PointX="1.5" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Stuff" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DispatcherModel.Units" Width="1.5" PointX="8.75" PointY="12" IsExpanded="true" />
+        <AssociationConnector Association="DispatcherModel.FK_Batch_Device" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_OperationHistory_Batch" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_CertificateEquipment_Equipments" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_CertificateStuff_Routing" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_CertificateStuff_Stuff" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_Consumables_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_MSL_Device" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_Rooms_District" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_Equipments_EquipmentStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_Equipments_Rooms" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_Equipments_Routing" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_OperationHistory_Equipments" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_OperationMSL_MSL" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_OperationHistory_OperationMSL" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_OperationHistory_Stuff" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_OperationMSL_Routing" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_PostBinding_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_Stuff_PostBinding" ManuallyRouted="false" />
+        <AssociationConnector Association="DispatcherModel.FK_Stuff_StaffStatus" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
