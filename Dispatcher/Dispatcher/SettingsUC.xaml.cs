@@ -16,24 +16,19 @@ using System.Windows.Shapes;
 namespace Dispatcher
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для SettingsUC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SettingsUC : UserControl
     {
-        public MainWindow()
+        public SettingsUC()
         {
             InitializeComponent();
         }
 
-        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            WorkSpace.Visibility = Visibility.Collapsed;
-            Settings.Visibility = Visibility.Visible;
-        }
-        public void SettingBack()
-        {
-            Settings.Visibility = Visibility.Collapsed;
-            WorkSpace.Visibility = Visibility.Visible;
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.SettingBack();
         }
     }
 }
