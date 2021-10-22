@@ -23,7 +23,6 @@
         <TabItem Header="Склад">
             <TabControl>
                 <TabItem Header="Расходники">
-
                 </TabItem>
                 <TabItem Header="Среды">
 
