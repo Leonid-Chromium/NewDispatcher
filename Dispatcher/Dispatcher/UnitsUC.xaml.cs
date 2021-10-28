@@ -42,9 +42,14 @@ namespace Dispatcher
             Update();
         }
 
-        private void Upgrade_Click(object sender, RoutedEventArgs e)
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             Update();
+        }
+
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

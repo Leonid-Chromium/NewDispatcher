@@ -252,6 +252,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\Icon\Create.png" />
+    <Resource Include="Assets\Icon\Delete.png" />
+    <Resource Include="Assets\Icon\Done.png" />
+    <Resource Include="Assets\Icon\Upgrade.png" />
     <Content Include="DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataModel.edmx</DependentUpon>

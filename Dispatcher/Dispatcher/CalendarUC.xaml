@@ -14,7 +14,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Calendar Grid.Row="0" x:Name="Calendar"/>
+        <Calendar Grid.Row="0" x:Name="Calendar">
+            <Calendar.CalendarButtonStyle>
+                <Style>
+                    
+                </Style>
+            </Calendar.CalendarButtonStyle>
+        </Calendar>
         <Border Grid.Row="1">
             <Grid>
                 <Grid.RowDefinitions>
