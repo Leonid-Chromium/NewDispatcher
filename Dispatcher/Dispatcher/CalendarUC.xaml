@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Dispatcher"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="LightSlateGray">
+    <Grid Background="{StaticResource TestLinearGradient}">
         <Grid.RowDefinitions>
             <RowDefinition Height="175"/>
             <RowDefinition/>
