@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\App.xaml
-8-875671793
-2921250124
-371923349363
-182071080061
-AuthorizationWindow.xaml;CalendarUC.xaml;DistrictUC.xaml;MainWindow.xaml;SettingsUC.xaml;TabControlUC.xaml;TestDataGridUC.xaml;UnitsUC.xaml;
+9-129833433
 
-True
+15-262706482
+182071080061
+AuthorizationWindow.xaml;CalendarUC.xaml;DistrictUC.xaml;MainWindow.xaml;NewUnitsUC.xaml;SettingsUC.xaml;TabControlUC.xaml;TestDataGridUC.xaml;UnitsUC.xaml;
+
+False
 

@@ -16,15 +16,21 @@ using System.Windows.Shapes;
 namespace Dispatcher
 {
     /// <summary>
-    /// Логика взаимодействия для UnitsUC.xaml
+    /// Логика взаимодействия для NewUnitsUC.xaml
     /// </summary>
-    public partial class UnitsUC : UserControl
+    public partial class NewUnitsUC : UserControl
     {
         DispatcherEntities DataEntities = new DispatcherEntities();
 
-        public UnitsUC()
+        public NewUnitsUC()
         {
             InitializeComponent();
+        }
+
+        class Unit
+        {
+            public int ID;
+            public string Name;
         }
 
         public void Update()
@@ -37,11 +43,6 @@ namespace Dispatcher
             UnitsDataGrid.ItemsSource = query.ToList();
         }
 
-        public void Insert()
-        {
-
-        }
-
         private void UnitsUC_Loaded(object sender, RoutedEventArgs e)
         {
             Update();
@@ -50,6 +51,22 @@ namespace Dispatcher
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             Update();
+        }
+
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Units uni = new Units
+            //{
+            //    ID = IDValue,
+            //    Name = NameValue
+            //}
+
+            Unit unit = new Unit
+            {
+                ID = Convert.ToInt32(IDValue),
+                Name = Convert.ToString(NameValue)
+            };
+
         }
     }
 }
