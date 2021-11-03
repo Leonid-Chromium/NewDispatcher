@@ -67,16 +67,8 @@
     <Compile Include="CalendarUC.xaml.cs">
       <DependentUpon>CalendarUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DispatcherEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DispatcherEntities.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DistrictUC.xaml.cs">
       <DependentUpon>DistrictUC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NewUnitsUC.xaml.cs">
-      <DependentUpon>NewUnitsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
@@ -117,10 +109,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NewUnitsUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="SettingsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,17 +144,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DispatcherEntities.xsc">
-      <DependentUpon>DispatcherEntities.xsd</DependentUpon>
-    </None>
-    <None Include="DispatcherEntities.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DispatcherEntities.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DispatcherEntities.xss">
-      <DependentUpon>DispatcherEntities.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

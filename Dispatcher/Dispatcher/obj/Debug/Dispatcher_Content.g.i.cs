@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("datamodel.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("datamodel.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("basedispatcher.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("basedispatcher.tt")]
 
 

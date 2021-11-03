@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,9 @@ namespace Dispatcher
     /// </summary>
     public partial class UnitsUC : UserControl
     {
-        DispatcherEntities DataEntities = new DispatcherEntities();
+        private SqlConnection sqlConnection = null;
+
+        private SqlDataAdapter adapter = null;
 
         public UnitsUC()
         {
@@ -29,17 +33,18 @@ namespace Dispatcher
 
         public void Update()
         {
-            var query =
-            from Units in DataEntities.Units
-            orderby Units.ID
-            select new { Units.ID, Units.Name };
+            sqlConnection = new SqlConnection(@"Data Source=DESKTOP-LEONID\SQLEXPRESS;Initial Catalog=Dispatcher;Integrated Security=True");
 
-            UnitsDataGrid.ItemsSource = query.ToList();
-        }
+            sqlConnection.Open();
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.CommandText = "SELECT * FROM Units";
 
-        public void Insert()
-        {
+            adapter = new SqlDataAdapter(sqlCommand.CommandText, sqlConnection);
 
+            DataTable table = new DataTable();
+
+            adapter.Fill(table);
+            UnitsDataGrid.ItemsSource = table.DefaultView;
         }
 
         private void UnitsUC_Loaded(object sender, RoutedEventArgs e)
