@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dispatcher"
         mc:Ignorable="d"
-        Title="AuthorizationWindow" Height="450" Width="250">
+        Title="AuthorizationWindow" Height="450" Width="250" Background="{StaticResource TestRadialGradient}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
