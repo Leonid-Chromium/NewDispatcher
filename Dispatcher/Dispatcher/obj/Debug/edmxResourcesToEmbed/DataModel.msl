@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DispatcherModelContainer" CdmEntityContainer="DispatcherEntities">
+    <EntitySetMapping Name="Batch">
+      <EntityTypeMapping TypeName="DispatcherModel.Batch">
+        <MappingFragment StoreEntitySet="Batch">
+          <ScalarProperty Name="IDBatch" ColumnName="IDBatch" />
+          <ScalarProperty Name="KeyBatch" ColumnName="KeyBatch" />
+          <ScalarProperty Name="IDDevice" ColumnName="IDDevice" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="StartCount" ColumnName="StartCount" />
+          <ScalarProperty Name="LastCount" ColumnName="LastCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CertificateEquipment">
+      <EntityTypeMapping TypeName="DispatcherModel.CertificateEquipment">
+        <MappingFragment StoreEntitySet="CertificateEquipment">
+          <ScalarProperty Name="IDCertificate" ColumnName="IDCertificate" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IDEquipment" ColumnName="IDEquipment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CertificateStuff">
+      <EntityTypeMapping TypeName="DispatcherModel.CertificateStuff">
+        <MappingFragment StoreEntitySet="CertificateStuff">
+          <ScalarProperty Name="IDCertificate" ColumnName="IDCertificate" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IDStuff" ColumnName="IDStuff" />
+          <ScalarProperty Name="IDRouting" ColumnName="IDRouting" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CertificationPeriod">
+      <EntityTypeMapping TypeName="DispatcherModel.CertificationPeriod">
+        <MappingFragment StoreEntitySet="CertificationPeriod">
+          <ScalarProperty Name="IDCertificationPeriod" ColumnName="IDCertificationPeriod" />
+          <ScalarProperty Name="DayCount" ColumnName="DayCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consumables">
+      <EntityTypeMapping TypeName="DispatcherModel.Consumables">
+        <MappingFragment StoreEntitySet="Consumables">
+          <ScalarProperty Name="IDСonsumables" ColumnName="IDСonsumables" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Device">
+      <EntityTypeMapping TypeName="DispatcherModel.Device">
+        <MappingFragment StoreEntitySet="Device">
+          <ScalarProperty Name="IDDevice" ColumnName="IDDevice" />
+          <ScalarProperty Name="KeyDevice" ColumnName="KeyDevice" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IDMSL" ColumnName="IDMSL" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="District">
+      <EntityTypeMapping TypeName="DispatcherModel.District">
+        <MappingFragment StoreEntitySet="District">
+          <ScalarProperty Name="IDDistrict" ColumnName="IDDistrict" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MainTechnologist" ColumnName="MainTechnologist" />
+          <ScalarProperty Name="MainServiceTechnician" ColumnName="MainServiceTechnician" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipments">
+      <EntityTypeMapping TypeName="DispatcherModel.Equipments">
+        <MappingFragment StoreEntitySet="Equipments">
+          <ScalarProperty Name="IDEquipment" ColumnName="IDEquipment" />
+          <ScalarProperty Name="InventoryNumber" ColumnName="InventoryNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Destiny" ColumnName="Destiny" />
+          <ScalarProperty Name="Room" ColumnName="Room" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Routing" ColumnName="Routing" />
+          <ScalarProperty Name="CertificationPeriod" ColumnName="CertificationPeriod" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Lenght" ColumnName="Lenght" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentStatus">
+      <EntityTypeMapping TypeName="DispatcherModel.EquipmentStatus">
+        <MappingFragment StoreEntitySet="EquipmentStatus">
+          <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
+          <ScalarProperty Name="Decoding" ColumnName="Decoding" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSL">
+      <EntityTypeMapping TypeName="DispatcherModel.MSL">
+        <MappingFragment StoreEntitySet="MSL">
+          <ScalarProperty Name="IDMSL" ColumnName="IDMSL" />
+          <ScalarProperty Name="KeyMSL" ColumnName="KeyMSL" />
+          <ScalarProperty Name="IDDevice" ColumnName="IDDevice" />
+          <ScalarProperty Name="IDBatch" ColumnName="IDBatch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperationHistory">
+      <EntityTypeMapping TypeName="DispatcherModel.OperationHistory">
+        <MappingFragment StoreEntitySet="OperationHistory">
+          <ScalarProperty Name="IDRecord" ColumnName="IDRecord" />
+          <ScalarProperty Name="IDBatch" ColumnName="IDBatch" />
+          <ScalarProperty Name="IDOperation" ColumnName="IDOperation" />
+          <ScalarProperty Name="IDStaff" ColumnName="IDStaff" />
+          <ScalarProperty Name="IDEquipment" ColumnName="IDEquipment" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperationMSL">
+      <EntityTypeMapping TypeName="DispatcherModel.OperationMSL">
+        <MappingFragment StoreEntitySet="OperationMSL">
+          <ScalarProperty Name="IDOperation" ColumnName="IDOperation" />
+          <ScalarProperty Name="IDMSL" ColumnName="IDMSL" />
+          <ScalarProperty Name="AVM" ColumnName="AVM" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="Routing" ColumnName="Routing" />
+          <ScalarProperty Name="InteractionTime" ColumnName="InteractionTime" />
+          <ScalarProperty Name="TypeOfProcessing" ColumnName="TypeOfProcessing" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post">
+      <EntityTypeMapping TypeName="DispatcherModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="IDPost" ColumnName="IDPost" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostBinding">
+      <EntityTypeMapping TypeName="DispatcherModel.PostBinding">
+        <MappingFragment StoreEntitySet="PostBinding">
+          <ScalarProperty Name="IDStuff" ColumnName="IDStuff" />
+          <ScalarProperty Name="IDPost" ColumnName="IDPost" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="DispatcherModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="IDRole" ColumnName="IDRole" />
+          <ScalarProperty Name="Decoding" ColumnName="Decoding" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="DispatcherModel.Rooms">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="IDRoom" ColumnName="IDRoom" />
+          <ScalarProperty Name="IDDistrict" ColumnName="IDDistrict" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Routing">
+      <EntityTypeMapping TypeName="DispatcherModel.Routing">
+        <MappingFragment StoreEntitySet="Routing">
+          <ScalarProperty Name="IDRouting" ColumnName="IDRouting" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StaffStatus">
+      <EntityTypeMapping TypeName="DispatcherModel.StaffStatus">
+        <MappingFragment StoreEntitySet="StaffStatus">
+          <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
+          <ScalarProperty Name="Decoding" ColumnName="Decoding" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stuff">
+      <EntityTypeMapping TypeName="DispatcherModel.Stuff">
+        <MappingFragment StoreEntitySet="Stuff">
+          <ScalarProperty Name="IDStuff" ColumnName="IDStuff" />
+          <ScalarProperty Name="IDDistrict" ColumnName="IDDistrict" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstPostBind" ColumnName="FirstPostBind" />
+          <ScalarProperty Name="SecondPostBind" ColumnName="SecondPostBind" />
+          <ScalarProperty Name="PersonnelNumber" ColumnName="PersonnelNumber" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="ResidenceAddress" ColumnName="ResidenceAddress" />
+          <ScalarProperty Name="WorkPhoneNumber" ColumnName="WorkPhoneNumber" />
+          <ScalarProperty Name="PersonalPhoneNumber" ColumnName="PersonalPhoneNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DispatcherModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Units">
+      <EntityTypeMapping TypeName="DispatcherModel.Units">
+        <MappingFragment StoreEntitySet="Units">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

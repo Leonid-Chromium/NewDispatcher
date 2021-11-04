@@ -24,5 +24,16 @@ namespace Dispatcher
         {
             InitializeComponent();
         }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            WorkSpace.Visibility = Visibility.Collapsed;
+            Settings.Visibility = Visibility.Visible;
+        }
+        public void SettingBack()
+        {
+            Settings.Visibility = Visibility.Collapsed;
+            WorkSpace.Visibility = Visibility.Visible;
+        }
     }
 }

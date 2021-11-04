@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DispatcherModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Batch">
+    <Key>
+      <PropertyRef Name="IDBatch" />
+    </Key>
+    <Property Name="IDBatch" Type="Int32" Nullable="false" />
+    <Property Name="KeyBatch" Type="Int32" Nullable="false" />
+    <Property Name="IDDevice" Type="Int32" Nullable="false" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="StartCount" Type="Int32" Nullable="false" />
+    <Property Name="LastCount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Device" Relationship="Self.FK_Batch_Device" FromRole="Batch" ToRole="Device" />
+    <NavigationProperty Name="OperationHistory" Relationship="Self.FK_OperationHistory_Batch" FromRole="Batch" ToRole="OperationHistory" />
+  </EntityType>
+  <EntityType Name="CertificateEquipment">
+    <Key>
+      <PropertyRef Name="IDCertificate" />
+    </Key>
+    <Property Name="IDCertificate" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IDEquipment" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Equipments" Relationship="Self.FK_CertificateEquipment_Equipments" FromRole="CertificateEquipment" ToRole="Equipments" />
+  </EntityType>
+  <EntityType Name="CertificateStuff">
+    <Key>
+      <PropertyRef Name="IDCertificate" />
+    </Key>
+    <Property Name="IDCertificate" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IDStuff" Type="Int32" Nullable="false" />
+    <Property Name="IDRouting" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Routing" Relationship="Self.FK_CertificateStuff_Routing" FromRole="CertificateStuff" ToRole="Routing" />
+    <NavigationProperty Name="Stuff" Relationship="Self.FK_CertificateStuff_Stuff" FromRole="CertificateStuff" ToRole="Stuff" />
+  </EntityType>
+  <EntityType Name="CertificationPeriod">
+    <Key>
+      <PropertyRef Name="IDCertificationPeriod" />
+    </Key>
+    <Property Name="IDCertificationPeriod" Type="Int32" Nullable="false" />
+    <Property Name="DayCount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Consumables">
+    <Key>
+      <PropertyRef Name="IDСonsumables" />
+    </Key>
+    <Property Name="IDСonsumables" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="Unit" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Units" Relationship="Self.FK_Consumables_Units" FromRole="Consumables" ToRole="Units" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="IDDevice" />
+    </Key>
+    <Property Name="IDDevice" Type="Int32" Nullable="false" />
+    <Property Name="KeyDevice" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDMSL" Type="Int32" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Batch" Relationship="Self.FK_Batch_Device" FromRole="Device" ToRole="Batch" />
+    <NavigationProperty Name="MSL" Relationship="Self.FK_MSL_Device" FromRole="Device" ToRole="MSL" />
+  </EntityType>
+  <EntityType Name="District">
+    <Key>
+      <PropertyRef Name="IDDistrict" />
+    </Key>
+    <Property Name="IDDistrict" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MainTechnologist" Type="Int32" />
+    <Property Name="MainServiceTechnician" Type="Int32" />
+    <NavigationProperty Name="Rooms" Relationship="Self.FK_Rooms_District" FromRole="District" ToRole="Rooms" />
+  </EntityType>
+  <EntityType Name="Equipments">
+    <Key>
+      <PropertyRef Name="IDEquipment" />
+    </Key>
+    <Property Name="IDEquipment" Type="Int32" Nullable="false" />
+    <Property Name="InventoryNumber" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Destiny" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Room" Type="Int32" />
+    <Property Name="District" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Routing" Type="Int32" />
+    <Property Name="CertificationPeriod" Type="Int32" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="Lenght" Type="Int32" />
+    <Property Name="Width" Type="Int32" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Weight" Type="Int32" />
+    <NavigationProperty Name="CertificateEquipment" Relationship="Self.FK_CertificateEquipment_Equipments" FromRole="Equipments" ToRole="CertificateEquipment" />
+    <NavigationProperty Name="EquipmentStatus" Relationship="Self.FK_Equipments_EquipmentStatus" FromRole="Equipments" ToRole="EquipmentStatus" />
+    <NavigationProperty Name="Rooms" Relationship="Self.FK_Equipments_Rooms" FromRole="Equipments" ToRole="Rooms" />
+    <NavigationProperty Name="Routing1" Relationship="Self.FK_Equipments_Routing" FromRole="Equipments" ToRole="Routing" />
+    <NavigationProperty Name="OperationHistory" Relationship="Self.FK_OperationHistory_Equipments" FromRole="Equipments" ToRole="OperationHistory" />
+  </EntityType>
+  <EntityType Name="EquipmentStatus">
+    <Key>
+      <PropertyRef Name="IDStatus" />
+    </Key>
+    <Property Name="IDStatus" Type="Int32" Nullable="false" />
+    <Property Name="Decoding" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Equipments" Relationship="Self.FK_Equipments_EquipmentStatus" FromRole="EquipmentStatus" ToRole="Equipments" />
+  </EntityType>
+  <EntityType Name="MSL">
+    <Key>
+      <PropertyRef Name="IDMSL" />
+    </Key>
+    <Property Name="IDMSL" Type="Int32" Nullable="false" />
+    <Property Name="KeyMSL" Type="Int32" Nullable="false" />
+    <Property Name="IDDevice" Type="Int32" Nullable="false" />
+    <Property Name="IDBatch" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Device" Relationship="Self.FK_MSL_Device" FromRole="MSL" ToRole="Device" />
+    <NavigationProperty Name="OperationMSL" Relationship="Self.FK_OperationMSL_MSL" FromRole="MSL" ToRole="OperationMSL" />
+  </EntityType>
+  <EntityType Name="OperationHistory">
+    <Key>
+      <PropertyRef Name="IDRecord" />
+    </Key>
+    <Property Name="IDRecord" Type="Int32" Nullable="false" />
+    <Property Name="IDBatch" Type="Int32" Nullable="false" />
+    <Property Name="IDOperation" Type="Int32" Nullable="false" />
+    <Property Name="IDStaff" Type="Int32" Nullable="false" />
+    <Property Name="IDEquipment" Type="Int32" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Batch" Relationship="Self.FK_OperationHistory_Batch" FromRole="OperationHistory" ToRole="Batch" />
+    <NavigationProperty Name="Equipments" Relationship="Self.FK_OperationHistory_Equipments" FromRole="OperationHistory" ToRole="Equipments" />
+    <NavigationProperty Name="OperationMSL" Relationship="Self.FK_OperationHistory_OperationMSL" FromRole="OperationHistory" ToRole="OperationMSL" />
+    <NavigationProperty Name="Stuff" Relationship="Self.FK_OperationHistory_Stuff" FromRole="OperationHistory" ToRole="Stuff" />
+  </EntityType>
+  <EntityType Name="OperationMSL">
+    <Key>
+      <PropertyRef Name="IDOperation" />
+    </Key>
+    <Property Name="IDOperation" Type="Int32" Nullable="false" />
+    <Property Name="IDMSL" Type="Int32" />
+    <Property Name="AVM" Type="Binary" MaxLength="2" FixedLength="true" />
+    <Property Name="Code" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Mode" Type="Int32" />
+    <Property Name="Routing" Type="Int32" />
+    <Property Name="InteractionTime" Type="Time" Precision="7" />
+    <Property Name="TypeOfProcessing" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MSL" Relationship="Self.FK_OperationMSL_MSL" FromRole="OperationMSL" ToRole="MSL" />
+    <NavigationProperty Name="OperationHistory" Relationship="Self.FK_OperationHistory_OperationMSL" FromRole="OperationMSL" ToRole="OperationHistory" />
+    <NavigationProperty Name="Routing1" Relationship="Self.FK_OperationMSL_Routing" FromRole="OperationMSL" ToRole="Routing" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="IDPost" />
+    </Key>
+    <Property Name="IDPost" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PostBinding" Relationship="Self.FK_PostBinding_Post" FromRole="Post" ToRole="PostBinding" />
+  </EntityType>
+  <EntityType Name="PostBinding">
+    <Key>
+      <PropertyRef Name="IDStuff" />
+    </Key>
+    <Property Name="IDStuff" Type="Int32" Nullable="false" />
+    <Property Name="IDPost" Type="Int32" Nullable="false" />
+    <Property Name="Category" Type="Int32" />
+    <Property Name="Salary" Type="Int32" Nullable="false" />
+    <Property Name="DateStart" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DateEnd" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Post" Relationship="Self.FK_PostBinding_Post" FromRole="PostBinding" ToRole="Post" />
+    <NavigationProperty Name="Stuff" Relationship="Self.FK_Stuff_PostBinding" FromRole="PostBinding" ToRole="Stuff" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="IDRole" />
+    </Key>
+    <Property Name="IDRole" Type="Int32" Nullable="false" />
+    <Property Name="Decoding" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rooms">
+    <Key>
+      <PropertyRef Name="IDRoom" />
+    </Key>
+    <Property Name="IDRoom" Type="Int32" Nullable="false" />
+    <Property Name="IDDistrict" Type="Int32" Nullable="false" />
+    <Property Name="Number" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="District" Relationship="Self.FK_Rooms_District" FromRole="Rooms" ToRole="District" />
+    <NavigationProperty Name="Equipments" Relationship="Self.FK_Equipments_Rooms" FromRole="Rooms" ToRole="Equipments" />
+  </EntityType>
+  <EntityType Name="Routing">
+    <Key>
+      <PropertyRef Name="IDRouting" />
+    </Key>
+    <Property Name="IDRouting" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CertificateStuff" Relationship="Self.FK_CertificateStuff_Routing" FromRole="Routing" ToRole="CertificateStuff" />
+    <NavigationProperty Name="Equipments" Relationship="Self.FK_Equipments_Routing" FromRole="Routing" ToRole="Equipments" />
+    <NavigationProperty Name="OperationMSL" Relationship="Self.FK_OperationMSL_Routing" FromRole="Routing" ToRole="OperationMSL" />
+  </EntityType>
+  <EntityType Name="StaffStatus">
+    <Key>
+      <PropertyRef Name="IDStatus" />
+    </Key>
+    <Property Name="IDStatus" Type="Int32" Nullable="false" />
+    <Property Name="Decoding" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Stuff" Relationship="Self.FK_Stuff_StaffStatus" FromRole="StaffStatus" ToRole="Stuff" />
+  </EntityType>
+  <EntityType Name="Stuff">
+    <Key>
+      <PropertyRef Name="IDStuff" />
+    </Key>
+    <Property Name="IDStuff" Type="Int32" Nullable="false" />
+    <Property Name="IDDistrict" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="FirstPostBind" Type="Int32" Nullable="false" />
+    <Property Name="SecondPostBind" Type="Int32" />
+    <Property Name="PersonnelNumber" Type="Int32" Nullable="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Education" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ResidenceAddress" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="WorkPhoneNumber" Type="Int32" />
+    <Property Name="PersonalPhoneNumber" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CertificateStuff" Relationship="Self.FK_CertificateStuff_Stuff" FromRole="Stuff" ToRole="CertificateStuff" />
+    <NavigationProperty Name="OperationHistory" Relationship="Self.FK_OperationHistory_Stuff" FromRole="Stuff" ToRole="OperationHistory" />
+    <NavigationProperty Name="PostBinding" Relationship="Self.FK_Stuff_PostBinding" FromRole="Stuff" ToRole="PostBinding" />
+    <NavigationProperty Name="StaffStatus" Relationship="Self.FK_Stuff_StaffStatus" FromRole="Stuff" ToRole="StaffStatus" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Units">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Consumables" Relationship="Self.FK_Consumables_Units" FromRole="Units" ToRole="Consumables" />
+  </EntityType>
+  <Association Name="FK_Batch_Device">
+    <End Role="Device" Type="Self.Device" Multiplicity="1" />
+    <End Role="Batch" Type="Self.Batch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="IDDevice" />
+      </Principal>
+      <Dependent Role="Batch">
+        <PropertyRef Name="IDDevice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationHistory_Batch">
+    <End Role="Batch" Type="Self.Batch" Multiplicity="1" />
+    <End Role="OperationHistory" Type="Self.OperationHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Batch">
+        <PropertyRef Name="IDBatch" />
+      </Principal>
+      <Dependent Role="OperationHistory">
+        <PropertyRef Name="IDBatch" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CertificateEquipment_Equipments">
+    <End Role="Equipments" Type="Self.Equipments" Multiplicity="1" />
+    <End Role="CertificateEquipment" Type="Self.CertificateEquipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipments">
+        <PropertyRef Name="IDEquipment" />
+      </Principal>
+      <Dependent Role="CertificateEquipment">
+        <PropertyRef Name="IDEquipment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CertificateStuff_Routing">
+    <End Role="Routing" Type="Self.Routing" Multiplicity="1" />
+    <End Role="CertificateStuff" Type="Self.CertificateStuff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Routing">
+        <PropertyRef Name="IDRouting" />
+      </Principal>
+      <Dependent Role="CertificateStuff">
+        <PropertyRef Name="IDRouting" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CertificateStuff_Stuff">
+    <End Role="Stuff" Type="Self.Stuff" Multiplicity="1" />
+    <End Role="CertificateStuff" Type="Self.CertificateStuff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stuff">
+        <PropertyRef Name="IDStuff" />
+      </Principal>
+      <Dependent Role="CertificateStuff">
+        <PropertyRef Name="IDStuff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Consumables_Units">
+    <End Role="Units" Type="Self.Units" Multiplicity="1" />
+    <End Role="Consumables" Type="Self.Consumables" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Units">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Consumables">
+        <PropertyRef Name="Unit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MSL_Device">
+    <End Role="Device" Type="Self.Device" Multiplicity="1" />
+    <End Role="MSL" Type="Self.MSL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="IDDevice" />
+      </Principal>
+      <Dependent Role="MSL">
+        <PropertyRef Name="IDDevice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rooms_District">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
+    <End Role="Rooms" Type="Self.Rooms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="District">
+        <PropertyRef Name="IDDistrict" />
+      </Principal>
+      <Dependent Role="Rooms">
+        <PropertyRef Name="IDDistrict" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipments_EquipmentStatus">
+    <End Role="EquipmentStatus" Type="Self.EquipmentStatus" Multiplicity="0..1" />
+    <End Role="Equipments" Type="Self.Equipments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentStatus">
+        <PropertyRef Name="IDStatus" />
+      </Principal>
+      <Dependent Role="Equipments">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipments_Rooms">
+    <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
+    <End Role="Equipments" Type="Self.Equipments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rooms">
+        <PropertyRef Name="IDRoom" />
+      </Principal>
+      <Dependent Role="Equipments">
+        <PropertyRef Name="Room" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipments_Routing">
+    <End Role="Routing" Type="Self.Routing" Multiplicity="0..1" />
+    <End Role="Equipments" Type="Self.Equipments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Routing">
+        <PropertyRef Name="IDRouting" />
+      </Principal>
+      <Dependent Role="Equipments">
+        <PropertyRef Name="Routing" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationHistory_Equipments">
+    <End Role="Equipments" Type="Self.Equipments" Multiplicity="1" />
+    <End Role="OperationHistory" Type="Self.OperationHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipments">
+        <PropertyRef Name="IDEquipment" />
+      </Principal>
+      <Dependent Role="OperationHistory">
+        <PropertyRef Name="IDEquipment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationMSL_MSL">
+    <End Role="MSL" Type="Self.MSL" Multiplicity="0..1" />
+    <End Role="OperationMSL" Type="Self.OperationMSL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MSL">
+        <PropertyRef Name="IDMSL" />
+      </Principal>
+      <Dependent Role="OperationMSL">
+        <PropertyRef Name="IDMSL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationHistory_OperationMSL">
+    <End Role="OperationMSL" Type="Self.OperationMSL" Multiplicity="1" />
+    <End Role="OperationHistory" Type="Self.OperationHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperationMSL">
+        <PropertyRef Name="IDOperation" />
+      </Principal>
+      <Dependent Role="OperationHistory">
+        <PropertyRef Name="IDOperation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationHistory_Stuff">
+    <End Role="Stuff" Type="Self.Stuff" Multiplicity="1" />
+    <End Role="OperationHistory" Type="Self.OperationHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stuff">
+        <PropertyRef Name="IDStuff" />
+      </Principal>
+      <Dependent Role="OperationHistory">
+        <PropertyRef Name="IDStaff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationMSL_Routing">
+    <End Role="Routing" Type="Self.Routing" Multiplicity="0..1" />
+    <End Role="OperationMSL" Type="Self.OperationMSL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Routing">
+        <PropertyRef Name="IDRouting" />
+      </Principal>
+      <Dependent Role="OperationMSL">
+        <PropertyRef Name="Routing" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PostBinding_Post">
+    <End Role="Post" Type="Self.Post" Multiplicity="1" />
+    <End Role="PostBinding" Type="Self.PostBinding" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="IDPost" />
+      </Principal>
+      <Dependent Role="PostBinding">
+        <PropertyRef Name="IDPost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stuff_PostBinding">
+    <End Role="PostBinding" Type="Self.PostBinding" Multiplicity="1" />
+    <End Role="Stuff" Type="Self.Stuff" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PostBinding">
+        <PropertyRef Name="IDStuff" />
+      </Principal>
+      <Dependent Role="Stuff">
+        <PropertyRef Name="IDStuff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stuff_StaffStatus">
+    <End Role="StaffStatus" Type="Self.StaffStatus" Multiplicity="0..1" />
+    <End Role="Stuff" Type="Self.Stuff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StaffStatus">
+        <PropertyRef Name="IDStatus" />
+      </Principal>
+      <Dependent Role="Stuff">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DispatcherEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Batch" EntityType="Self.Batch" />
+    <EntitySet Name="CertificateEquipment" EntityType="Self.CertificateEquipment" />
+    <EntitySet Name="CertificateStuff" EntityType="Self.CertificateStuff" />
+    <EntitySet Name="CertificationPeriod" EntityType="Self.CertificationPeriod" />
+    <EntitySet Name="Consumables" EntityType="Self.Consumables" />
+    <EntitySet Name="Device" EntityType="Self.Device" />
+    <EntitySet Name="District" EntityType="Self.District" />
+    <EntitySet Name="Equipments" EntityType="Self.Equipments" />
+    <EntitySet Name="EquipmentStatus" EntityType="Self.EquipmentStatus" />
+    <EntitySet Name="MSL" EntityType="Self.MSL" />
+    <EntitySet Name="OperationHistory" EntityType="Self.OperationHistory" />
+    <EntitySet Name="OperationMSL" EntityType="Self.OperationMSL" />
+    <EntitySet Name="Post" EntityType="Self.Post" />
+    <EntitySet Name="PostBinding" EntityType="Self.PostBinding" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="Rooms" EntityType="Self.Rooms" />
+    <EntitySet Name="Routing" EntityType="Self.Routing" />
+    <EntitySet Name="StaffStatus" EntityType="Self.StaffStatus" />
+    <EntitySet Name="Stuff" EntityType="Self.Stuff" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Units" EntityType="Self.Units" />
+    <AssociationSet Name="FK_Batch_Device" Association="Self.FK_Batch_Device">
+      <End Role="Device" EntitySet="Device" />
+      <End Role="Batch" EntitySet="Batch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationHistory_Batch" Association="Self.FK_OperationHistory_Batch">
+      <End Role="Batch" EntitySet="Batch" />
+      <End Role="OperationHistory" EntitySet="OperationHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CertificateEquipment_Equipments" Association="Self.FK_CertificateEquipment_Equipments">
+      <End Role="Equipments" EntitySet="Equipments" />
+      <End Role="CertificateEquipment" EntitySet="CertificateEquipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CertificateStuff_Routing" Association="Self.FK_CertificateStuff_Routing">
+      <End Role="Routing" EntitySet="Routing" />
+      <End Role="CertificateStuff" EntitySet="CertificateStuff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CertificateStuff_Stuff" Association="Self.FK_CertificateStuff_Stuff">
+      <End Role="Stuff" EntitySet="Stuff" />
+      <End Role="CertificateStuff" EntitySet="CertificateStuff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Consumables_Units" Association="Self.FK_Consumables_Units">
+      <End Role="Units" EntitySet="Units" />
+      <End Role="Consumables" EntitySet="Consumables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MSL_Device" Association="Self.FK_MSL_Device">
+      <End Role="Device" EntitySet="Device" />
+      <End Role="MSL" EntitySet="MSL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rooms_District" Association="Self.FK_Rooms_District">
+      <End Role="District" EntitySet="District" />
+      <End Role="Rooms" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipments_EquipmentStatus" Association="Self.FK_Equipments_EquipmentStatus">
+      <End Role="EquipmentStatus" EntitySet="EquipmentStatus" />
+      <End Role="Equipments" EntitySet="Equipments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipments_Rooms" Association="Self.FK_Equipments_Rooms">
+      <End Role="Rooms" EntitySet="Rooms" />
+      <End Role="Equipments" EntitySet="Equipments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipments_Routing" Association="Self.FK_Equipments_Routing">
+      <End Role="Routing" EntitySet="Routing" />
+      <End Role="Equipments" EntitySet="Equipments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationHistory_Equipments" Association="Self.FK_OperationHistory_Equipments">
+      <End Role="Equipments" EntitySet="Equipments" />
+      <End Role="OperationHistory" EntitySet="OperationHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationMSL_MSL" Association="Self.FK_OperationMSL_MSL">
+      <End Role="MSL" EntitySet="MSL" />
+      <End Role="OperationMSL" EntitySet="OperationMSL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationHistory_OperationMSL" Association="Self.FK_OperationHistory_OperationMSL">
+      <End Role="OperationMSL" EntitySet="OperationMSL" />
+      <End Role="OperationHistory" EntitySet="OperationHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationHistory_Stuff" Association="Self.FK_OperationHistory_Stuff">
+      <End Role="Stuff" EntitySet="Stuff" />
+      <End Role="OperationHistory" EntitySet="OperationHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationMSL_Routing" Association="Self.FK_OperationMSL_Routing">
+      <End Role="Routing" EntitySet="Routing" />
+      <End Role="OperationMSL" EntitySet="OperationMSL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PostBinding_Post" Association="Self.FK_PostBinding_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="PostBinding" EntitySet="PostBinding" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stuff_PostBinding" Association="Self.FK_Stuff_PostBinding">
+      <End Role="PostBinding" EntitySet="PostBinding" />
+      <End Role="Stuff" EntitySet="Stuff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stuff_StaffStatus" Association="Self.FK_Stuff_StaffStatus">
+      <End Role="StaffStatus" EntitySet="StaffStatus" />
+      <End Role="Stuff" EntitySet="Stuff" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
