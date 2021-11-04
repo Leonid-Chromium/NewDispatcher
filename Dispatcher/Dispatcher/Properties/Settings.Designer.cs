@@ -33,5 +33,18 @@ namespace Dispatcher.Properties {
                 return ((string)(this["DispatcherConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-LEONID\\SQLEXPRESS;Initial Catalog=NewDispatcher;Integrated Se" +
+            "curity=True")]
+        public string SqlConnectionString {
+            get {
+                return ((string)(this["SqlConnectionString"]));
+            }
+            set {
+                this["SqlConnectionString"] = value;
+            }
+        }
     }
 }

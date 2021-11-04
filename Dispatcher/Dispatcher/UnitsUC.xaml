@@ -13,24 +13,24 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Button x:Name="UpdateButton" Margin="10" Height="50" Width="50" Click="UpdateButton_Click">
-                <Image Source="/Assets/Icon/Upgrade.png" />
+                <Image Source="/Assets/Icon/Upgrade.png"/>
             </Button>
-            <Button x:Name="DeleteButton" Margin="10" Height="50" Width="50">
-                <Image Source="/Assets/Icon/Delete.png" />
+            <Button x:Name="DeleteButton" Margin="10" Height="50" Width="50" Click="DeleteButton_Click">
+                <Image Source="/Assets/Icon/Delete.png"/>
             </Button>
-            <Button x:Name="CreateButton" Margin="10" Height="50" Width="50">
-                <Image Source="/Assets/Icon/Create.png" />
+            <Button x:Name="CreateButton" Margin="10" Height="50" Width="50" Click="CreateButton_Click">
+                <Image Source="/Assets/Icon/Create.png"/>
             </Button>
-            <Button x:Name="UpgradeButton" Margin="10" Height="50" Width="50">
-                <Image Source="/Assets/Icon/Done.png" />
+            <Button x:Name="UpgradeButton" Margin="10" Height="50" Width="50" Click="UpgradeButton_Click">
+                <Image Source="/Assets/Icon/Done.png"/>
             </Button>
             <StackPanel Margin="10">
                 <Label Content="ID"/>
-                <TextBox x:Name="ID"/>
+                <TextBox x:Name="id"/>
             </StackPanel>
             <StackPanel Margin="10">
                 <Label Content="Значение"/>
-                <TextBox x:Name="MyValue"/>
+                <TextBox x:Name="name"/>
             </StackPanel>
         </StackPanel>
         <DataGrid x:Name="UnitsDataGrid" Grid.Row="1" Grid.ColumnSpan="2" Margin="10"/>

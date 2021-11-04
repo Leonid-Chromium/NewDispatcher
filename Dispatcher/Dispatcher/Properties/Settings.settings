@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-LEONID\SQLEXPRESS;Initial Catalog=Dispatcher;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="SqlConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=DESKTOP-LEONID\SQLEXPRESS;Initial Catalog=NewDispatcher;Integrated Security=True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
