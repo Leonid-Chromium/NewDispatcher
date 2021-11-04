@@ -28,14 +28,14 @@ namespace Dispatcher
 
         public class TestingItem
         {
-            public string qwe { get; set; }
-            public string rty { get; set; }
+            public string Qwe { get; set; }
+            public string Rty { get; set; }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            TestDG.Items.Add(new TestingItem { qwe = "erwtye", rty = "fgh" });
-            TestDG.Items.Add(new TestingItem { qwe = "Название", rty = "Значение" });
+            TestDG.Items.Add(new TestingItem { Qwe = "erwtye", Rty = "fgh" });
+            TestDG.Items.Add(new TestingItem { Qwe = "Название", Rty = "Значение" });
         }
     }
 }

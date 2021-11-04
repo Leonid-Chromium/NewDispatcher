@@ -1,7 +1,6 @@
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\Dispatcher.exe.config
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\Dispatcher.exe
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\Dispatcher.pdb
-D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Dispatcher.csproj.AssemblyReference.cache
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\AuthorizationWindow.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\MainWindow.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\App.g.cs
@@ -28,3 +27,9 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\SettingsUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\SettingsUC.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UnitsUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UnitsUC.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\EntityFramework.dll
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\EntityFramework.SqlServer.dll
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\EntityFramework.xml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\EntityFramework.SqlServer.xml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\ru\EntityFramework.resources.dll
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Dispatcher.csproj.AssemblyReference.cache
