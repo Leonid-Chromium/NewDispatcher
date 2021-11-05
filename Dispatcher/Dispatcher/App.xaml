@@ -8,10 +8,11 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Style/LeonidDictionary.xaml"/>
                 
-                <!--<ResourceDictionary Source="Style/SecondRoundStyle.xaml"/>-->
+                <ResourceDictionary Source="Style/SecondRoundStyle.xaml"/>
                 <!--<ResourceDictionary Source="Style/RoundStyle.xaml"/>-->
 
                 <ResourceDictionary Source="Theme/DarkTheme.xaml"/>
+                <ResourceDictionary Source="Theme/LightTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

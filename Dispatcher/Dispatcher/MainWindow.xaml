@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Dispatcher"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
-    <Grid Background="{StaticResource BackFirstLevel}">
+    <Grid Background="{DynamicResource BackFirstLevel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
@@ -17,6 +17,13 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <local:CalendarUC x:Name="CalendarUC" Grid.Column="0" Grid.Row="0"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <ComboBox x:Name="styleBox"/>
+            <Button x:Name="SetDarkSide" Content="Set Dark Side" Click="SetDarkSide_Click"/>
+            <Button x:Name="SetLightSide" Content="Set Light Side" Click="SetLightSide_Click"/>
+        </StackPanel>
+
         <local:TabControlUC x:Name="TabSpace" Grid.Column="1" Grid.RowSpan="3"/>
         <Grid Grid.Column="0" Grid.Row="2" Margin="25">
             <Grid.ColumnDefinitions>

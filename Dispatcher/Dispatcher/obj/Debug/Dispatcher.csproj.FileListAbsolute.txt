@@ -27,3 +27,4 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\LeonidDiction
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\App.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\SecondRoundStyle.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\DarkTheme.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\LightTheme.baml
