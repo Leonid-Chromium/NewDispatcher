@@ -20,8 +20,8 @@
 
         <StackPanel Grid.Column="0" Grid.Row="1">
             <ComboBox x:Name="styleBox"/>
-            <Button x:Name="SetDarkSide" Content="Set Dark Side" Click="SetDarkSide_Click"/>
-            <Button x:Name="SetLightSide" Content="Set Light Side" Click="SetLightSide_Click"/>
+            <Button x:Name="SetDarkSide" Height="40" Content="Set Dark Side" Click="SetDarkSide_Click"/>
+            <Button x:Name="SetLightSide" Height="40" Content="Set Light Side" Click="SetLightSide_Click"/>
         </StackPanel>
 
         <local:TabControlUC x:Name="TabSpace" Grid.Column="1" Grid.RowSpan="3"/>
