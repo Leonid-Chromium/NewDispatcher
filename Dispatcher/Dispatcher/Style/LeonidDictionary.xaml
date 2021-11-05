@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <LinearGradientBrush x:Key="TestLinearGradient" StartPoint="0, 0" EndPoint="0, 1">
+        <GradientStopCollection>
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="CadetBlue" Offset="0.25"/>
+            <GradientStop Color="CadetBlue" Offset="0.75"/>
+            <GradientStop Color="White" Offset="1"/>
+        </GradientStopCollection>        
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="HarleyLinearGradient" StartPoint="0, 0" EndPoint="0, 1">
+        <GradientStopCollection>
+            <GradientStop Color="DeepSkyBlue" Offset="0.25"/>
+            <GradientStop Color="Azure" Offset="0.5"/>
+            <GradientStop Color="DeepPink" Offset="0.75"/>
+        </GradientStopCollection>
+    </LinearGradientBrush>
+    <RadialGradientBrush x:Key="TestRadialGradient" MappingMode="RelativeToBoundingBox">
+        <GradientStopCollection>
+            <GradientStop Color="OrangeRed" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </GradientStopCollection>
+    </RadialGradientBrush>
+</ResourceDictionary>
