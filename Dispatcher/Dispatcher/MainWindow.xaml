@@ -32,5 +32,4 @@
         </Grid>
         <local:SettingsUC x:Name="Settings" Visibility="Collapsed"/>
     </Grid>
-    
 </Window>
