@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
-    <TabControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <TabControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource BackSecondLevel}">
         <TabItem Header="Партии">
 
         </TabItem>
@@ -30,7 +30,7 @@
             </TabControl>
         </TabItem>
         <TabItem Header="Редакторы">
-            <TabControl>
+            <TabControl Background="{StaticResource BackThirdLevel}">
                 <TabItem Header="Единицы измерения">
                     <local:UnitsUC/>
                 </TabItem>

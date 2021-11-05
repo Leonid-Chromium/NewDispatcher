@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:Dispatcher"
              StartupUri="AuthorizationWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style/LeonidDictionary.xaml"/>
+                
+                <!--<ResourceDictionary Source="Style/SecondRoundStyle.xaml"/>-->
+                <!--<ResourceDictionary Source="Style/RoundStyle.xaml"/>-->
+
+                <ResourceDictionary Source="Theme/DarkTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
