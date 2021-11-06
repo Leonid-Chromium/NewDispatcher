@@ -33,6 +33,6 @@
                 <TextBox x:Name="name"/>
             </StackPanel>
         </StackPanel>
-        <DataGrid x:Name="UnitsDataGrid" Grid.Row="1" Grid.ColumnSpan="2" Margin="10" IsMouseCapturedChanged="UnitsDataGrid_IsMouseCapturedChanged" />
+        <DataGrid x:Name="UnitsDataGrid" Grid.Row="1" Grid.ColumnSpan="2" Background="{DynamicResource Tranceparent}" Margin="10" IsMouseCapturedChanged="UnitsDataGrid_IsMouseCapturedChanged" />
     </Grid>
 </UserControl>
