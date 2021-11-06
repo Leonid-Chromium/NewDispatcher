@@ -39,3 +39,5 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Dark.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Light.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\App.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\CalendarStyle.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StuffsUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StuffsUC.baml

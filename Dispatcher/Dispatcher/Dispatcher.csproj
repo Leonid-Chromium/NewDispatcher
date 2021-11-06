@@ -75,6 +75,9 @@
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="SQLClass.cs" />
+    <Compile Include="StuffsUC.xaml.cs">
+      <DependentUpon>StuffsUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TabControlUC.xaml.cs">
       <DependentUpon>TabControlUC.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SettingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StuffsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

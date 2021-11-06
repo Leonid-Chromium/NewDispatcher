@@ -43,5 +43,31 @@ namespace Dispatcher
             MainWindow win = (MainWindow)Window.GetWindow(this);
             win.SettingBack();
         }
+
+        Grid ActualSettingsSpace;
+
+        private void SettingsSpaceControle(Grid grid)
+        {
+            if(grid == ActualSettingsSpace)
+            {
+                grid.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                ActualSettingsSpace.Visibility = Visibility.Collapsed;
+                grid.Visibility = Visibility.Visible;
+            }
+            ActualSettingsSpace = grid;
+        }
+
+        private void ThemeButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsSpaceControle(Themes);
+        }
+
+        private void StyleButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

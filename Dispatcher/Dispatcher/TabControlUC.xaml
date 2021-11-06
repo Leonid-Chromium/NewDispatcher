@@ -12,7 +12,7 @@
 
         </TabItem>
         <TabItem Header="Сотрудники">
-
+            <local:StuffsUC/>
         </TabItem>
         <TabItem Header="Оборудование">
 
