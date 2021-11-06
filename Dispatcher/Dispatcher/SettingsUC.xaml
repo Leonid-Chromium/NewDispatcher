@@ -9,7 +9,7 @@
     <Grid Background="{DynamicResource BackFirstLevel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
-            <ColumnDefinition/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -20,12 +20,8 @@
             <Button Content="Стили" Margin="5"/>
             <Button Content="Темы" Margin="5"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.RowSpan="2">
-            <Label Content="Список настрое раздела"/>
-        </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="1">
-            <ComboBox x:Name="styleBox"/>
+        <StackPanel Grid.Column="1" Grid.RowSpan="2" Background="{DynamicResource BackSecondLevel}">
             <Button x:Name="SetDarkSide" Height="40" Content="Set Dark Side" Click="SetDarkSide_Click"/>
             <Button x:Name="SetLightSide" Height="40" Content="Set Light Side" Click="SetLightSide_Click"/>
         </StackPanel>

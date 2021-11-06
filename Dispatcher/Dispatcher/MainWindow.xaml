@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Главное окно" Icon="Assets/Icon/Wafer.png" Height="720" Width="1280">
+    
     <Grid Background="{DynamicResource BackFirstLevel}">
         <Grid x:Name="WorkSpace">
             <Grid.ColumnDefinitions>
@@ -14,12 +15,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="250"/>
+                <RowDefinition Height="280"/>
                 <RowDefinition/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <local:CalendarUC x:Name="CalendarUC" Grid.Column="0" Grid.Row="0"/>
-            <Grid Grid.Column="0" Grid.Row="2" Background="LightSlateGray">
+            <Grid Grid.Column="0" Grid.Row="2" Background="{DynamicResource BackSecondLevel}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>

@@ -38,3 +38,4 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\Round.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Dark.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Light.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\App.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\CalendarStyle.baml
