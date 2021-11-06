@@ -22,6 +22,9 @@ namespace Dispatcher
         public AuthorizationWindow()
         {
             InitializeComponent();
+
+            //Загружаем тему
+            ThemeClass.MyThemeChange(Properties.Settings.Default.ThemeSettings);
         }
 
         public void OpenMainWindow()
