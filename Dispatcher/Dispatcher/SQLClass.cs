@@ -13,7 +13,7 @@ namespace Dispatcher
     {
         public static void UltimateSQLSelect(DataGrid dataGrid, String sqlTable)
         {
-            SqlDataAdapter adapter = null;
+            SqlDataAdapter adapter;
             string connectionString = Properties.Settings.Default.SqlConnectionString;
             string sqlExpression = String.Format("SELECT * FROM {0}", sqlTable);
 

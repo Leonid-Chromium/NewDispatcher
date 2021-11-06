@@ -33,3 +33,8 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\EntityFramework.xml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\EntityFramework.SqlServer.xml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\bin\Debug\ru\EntityFramework.resources.dll
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Dispatcher.csproj.AssemblyReference.cache
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\Artem.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\Round.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Dark.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Light.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\App.baml

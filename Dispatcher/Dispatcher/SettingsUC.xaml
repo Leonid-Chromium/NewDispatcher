@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Dispatcher"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Background="{DynamicResource BackFirstLevel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
@@ -22,6 +22,12 @@
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.RowSpan="2">
             <Label Content="Список настрое раздела"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <ComboBox x:Name="styleBox"/>
+            <Button x:Name="SetDarkSide" Height="40" Content="Set Dark Side" Click="SetDarkSide_Click"/>
+            <Button x:Name="SetLightSide" Height="40" Content="Set Light Side" Click="SetLightSide_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>
