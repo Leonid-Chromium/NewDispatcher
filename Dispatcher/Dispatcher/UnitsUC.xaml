@@ -26,13 +26,13 @@
             </Button>
             <StackPanel Margin="10">
                 <Label Content="ID"/>
-                <TextBox x:Name="id"/>
+                <TextBox x:Name="id" PreviewTextInput="NumberValidationTextBox"/>
             </StackPanel>
             <StackPanel Margin="10">
                 <Label Content="Значение"/>
                 <TextBox x:Name="name"/>
             </StackPanel>
         </StackPanel>
-        <DataGrid x:Name="UnitsDataGrid" Grid.Row="1" Grid.ColumnSpan="2" Margin="10"/>
+        <DataGrid x:Name="UnitsDataGrid" Grid.Row="1" Grid.ColumnSpan="2" Margin="10" IsMouseCapturedChanged="UnitsDataGrid_IsMouseCapturedChanged" />
     </Grid>
 </UserControl>

@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,99 +23,104 @@ namespace Dispatcher
     /// </summary>
     public partial class UnitsUC : UserControl
     {
-        private SqlConnection sqlConnection = null;
-
-        private SqlDataAdapter adapter = null;
 
         public UnitsUC()
         {
             InitializeComponent();
         }
 
-        private void UltimateSQLSelect()
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            string connectionString = Properties.Settings.Default.SqlConnectionString;
-            string sqlExpression = "SELECT * FROM Units";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(sqlExpression, connection);
-
-                adapter = new SqlDataAdapter(sqlExpression, connectionString);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                UnitsDataGrid.ItemsSource = table.DefaultView;
-            }
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
-
-        private void UltimateSQLInsert(string name)
-        {
-            string connectionString = Properties.Settings.Default.SqlConnectionString;
-            string sqlExpression = String.Format("INSERT INTO Units (Name) VALUES ('{0}')", name);
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(sqlExpression, connection);
-                command.ExecuteNonQuery(); //Выполнение запроса без возращения данных
-            }
-        }
-
-        private void UltimateSQLDelite(int id)
-        {
-            string connectionString = Properties.Settings.Default.SqlConnectionString;
-            string sqlExpression = String.Format("DELETE FROM Units WHERE ID={0}", id);
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(sqlExpression, connection);
-                command.ExecuteNonQuery(); //Выполнение запроса без возращения данных
-            }
-        }
-
-        private void UltimateSQLUpdate(int id, string name)
-        {
-            string connectionString = Properties.Settings.Default.SqlConnectionString;
-            string sqlExpression = String.Format("UPDATE Units SET Name='{0}' WHERE ID={1}", name, id);
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(sqlExpression, connection);
-                command.ExecuteNonQuery(); //Выполнение запроса без возращения данных
-            }
-        }
-
-       
 
         private void UnitsUC_Loaded(object sender, RoutedEventArgs e)
         {
-
+            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            UltimateSQLSelect();
+            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
         }
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-            UltimateSQLInsert(name.Text);
-            UltimateSQLSelect();
+            SQLClass.UltimateSQLInsert("Units", name.Text);
+            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            UltimateSQLDelite(Convert.ToInt32(id.Text));
-            UltimateSQLSelect();
+            SQLClass.UltimateSQLDelite("Units", Convert.ToInt32(id.Text));
+            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
         }
 
         private void UpgradeButton_Click(object sender, RoutedEventArgs e)
         {
-            UltimateSQLUpdate(Convert.ToInt32(id.Text), name.Text);
-            UltimateSQLSelect();
+            SQLClass.UltimateSQLUpdate("Units", Convert.ToInt32(id.Text), name.Text);
+            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
+        }
+
+        private void fun()
+        {
+            DataRowView row = UnitsDataGrid.SelectedItem as DataRowView;
+            try
+            {
+                id.Text = row.Row.ItemArray[0].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private object[] MyGetArray(DataGrid dataGrid)
+        {
+            try
+            {
+                DataRowView row = dataGrid.SelectedItem as DataRowView;
+                return row.Row.ItemArray;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        private void fun2(int i)
+        {
+            try
+            {
+                object[] array = MyGetArray(UnitsDataGrid);
+                MessageBox.Show(array[i].ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private string MyGetItemArray(int i)
+        {
+            try
+            {
+                object[] array = MyGetArray(UnitsDataGrid);
+                return array[i].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        private void UnitsDataGrid_IsMouseCapturedChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            id.Text = MyGetItemArray(0);
+            name.Text = MyGetItemArray(1);
         }
     }
 }
