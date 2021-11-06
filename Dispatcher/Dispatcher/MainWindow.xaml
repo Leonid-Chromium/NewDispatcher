@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dispatcher"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Главное окно" Icon="Assets/Icon/Wafer.png" Height="720" Width="1280">
     <Grid Background="{DynamicResource BackFirstLevel}">
         <Grid x:Name="WorkSpace">
