@@ -41,3 +41,5 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\App.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\CalendarStyle.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StuffsUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StuffsUC.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TestUserControl.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TestUserControl.baml

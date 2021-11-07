@@ -32,66 +32,49 @@ namespace Dispatcher
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        private void UnitsUC_Loaded(object sender, RoutedEventArgs e)
+        private void StuffsUC_Loaded(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLSelect(StuffsDataGrid, "Stuffs");
+            SQLClass.ReturnSQL(StuffsDataGrid, "SELECT IDStuff ,IDDistrict, FirstName, MiddleName, LastName, PersonnelNumber, Birthday, Education, ResidenceAddress, WorkPhoneNumber, PersonalPhoneNumber, Status, Note FROM Stuffs");
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLSelect(StuffsDataGrid, "Stuffs");
+            SQLClass.ReturnSQL(StuffsDataGrid, "SELECT IDStuff ,IDDistrict, FirstName, MiddleName, LastName, PersonnelNumber, Birthday, Education, ResidenceAddress, WorkPhoneNumber, PersonalPhoneNumber, Status, Note FROM Stuffs");
         }
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLInsert("Stuffs", string.Join(", ", IDDistrict.Text, FirstName.Text));
-            SQLClass.UltimateSQLSelect(StuffsDataGrid, "Units");
+            string[] valueName = { "IDDistrict", "FirstName", "MiddleName", "LastName", "PersonnelNumber", "Birthday", "Education", "ResidenceAddress", "WorkPhoneNumber", "PersonalPhoneNumber", "Status", "Note" };
+            string[] value = { IDDistrictTB.Text, "'" + FirstNameTB.Text + "'", "'" + MiddleNameTB.Text + "'", "'" + LastNameTB.Text + "'", PersonnelNumberTB.Text, "'" + BirthdayDP.Text + "'", "'" + EducationTB.Text + "'", "'" + ResidenceAddressTB.Text + "'", WorkPhoneNumberTB.Text, PersonalPhoneNumberTB.Text, statusTB.Text, "'" + NoteTB.Text + "'" };
+            SQLClass.NoReturnSQL(String.Format("INSERT INTO Stuffs SET {0}", SQLClass.ArrayToValue(valueName, value)));
+            SQLClass.ReturnSQL(StuffsDataGrid, "SELECT IDStuff ,IDDistrict, FirstName, MiddleName, LastName, PersonnelNumber, Birthday, Education, ResidenceAddress, WorkPhoneNumber, PersonalPhoneNumber, Status, Note FROM Stuffs");
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLDelite("Stuffs", Convert.ToInt32(id.Text));
-            SQLClass.UltimateSQLSelect(StuffsDataGrid, "Units");
+            //SQLClass.ReturnSQL(StuffsDataGrid, "SELECT IDStuff ,IDDistrict, FirstName, MiddleName, LastName, PersonnelNumber, Birthday, Education, ResidenceAddress, WorkPhoneNumber, PersonalPhoneNumber, Status, Note FROM Stuffs");
         }
 
         private void UpgradeButton_Click(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLUpdate("Stuffs", Convert.ToInt32(id.Text), FirstName.Text);
-            SQLClass.UltimateSQLSelect(StuffsDataGrid, "Stuffs");
-        }
-
-        private object[] MyGetArray(DataGrid dataGrid)
-        {
-            try
-            {
-                DataRowView row = dataGrid.SelectedItem as DataRowView;
-                return row.Row.ItemArray;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-        }
-
-        private string MyGetItemArray(int i)
-        {
-            try
-            {
-                object[] array = MyGetArray(StuffsDataGrid);
-                return array[i].ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
+            //SQLClass.ReturnSQL(StuffsDataGrid, "SELECT IDStuff ,IDDistrict, FirstName, MiddleName, LastName, PersonnelNumber, Birthday, Education, ResidenceAddress, WorkPhoneNumber, PersonalPhoneNumber, Status, Note FROM Stuffs");
         }
 
         private void UnitsDataGrid_IsMouseCapturedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            id.Text = MyGetItemArray(0);
-            FirstName.Text = MyGetItemArray(1);
+            idStuffTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 0);
+            IDDistrictTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 1);
+            FirstNameTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 2);
+            MiddleNameTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 3);
+            LastNameTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 4);
+            PersonnelNumberTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 5);
+            BirthdayDP.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 6);
+            EducationTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 7);
+            ResidenceAddressTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 8);
+            WorkPhoneNumberTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 9);
+            PersonalPhoneNumberTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 10);
+            statusTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 11);
+            NoteTB.Text = SQLClass.MyGetItemArray(StuffsDataGrid, 12);
         }
     }
 }

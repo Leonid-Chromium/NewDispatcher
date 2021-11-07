@@ -5,13 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Dispatcher"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             Loaded="StuffsUC_Loaded">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="150"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
+        <WrapPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
             <Button x:Name="UpdateButton" Margin="10" Height="50" Width="50" Click="UpdateButton_Click">
                 <Image Source="/Assets/Icon/Upgrade.png"/>
             </Button>
@@ -24,59 +29,61 @@
             <Button x:Name="UpgradeButton" Margin="10" Height="50" Width="50" Click="UpgradeButton_Click">
                 <Image Source="/Assets/Icon/Done.png"/>
             </Button>
+        </WrapPanel>
+        <WrapPanel Grid.Column="1" Grid.Row="0">
             <StackPanel Margin="10">
-                <Label Content="ID"/>
-                <TextBox x:Name="id" PreviewTextInput="NumberValidationTextBox"/>
+                <Label Content="ID персонала"/>
+                <TextBox x:Name="idStuffTB" PreviewTextInput="NumberValidationTextBox"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="ID"/>
-                <TextBox x:Name="IDDistrict" PreviewTextInput="NumberValidationTextBox"/>
+                <Label Content="ID участка"/>
+                <TextBox x:Name="IDDistrictTB" PreviewTextInput="NumberValidationTextBox"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="FirstName"/>
+                <Label Content="Имя"/>
+                <TextBox x:Name="FirstNameTB"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="MiddleName"/>
+                <Label Content="Отчество"/>
+                <TextBox x:Name="MiddleNameTB"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="LastName"/>
+                <Label Content="Фамилия"/>
+                <TextBox x:Name="LastNameTB"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="PersonnelNumber" PreviewTextInput="NumberValidationTextBox"/>
+                <Label Content="Персональный номер"/>
+                <TextBox x:Name="PersonnelNumberTB" PreviewTextInput="NumberValidationTextBox"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="Birthday"/>
+                <Label Content="Дата рождения"/>
+                <DatePicker x:Name="BirthdayDP"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="Education"/>
+                <Label Content="Образование"/>
+                <TextBox x:Name="EducationTB"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="ResidenceAddress"/>
+                <Label Content="Адрес проживания"/>
+                <TextBox x:Name="ResidenceAddressTB"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="WorkPhoneNumber" PreviewTextInput="NumberValidationTextBox"/>
+                <Label Content="Рабочий телефон"/>
+                <TextBox x:Name="WorkPhoneNumberTB" PreviewTextInput="NumberValidationTextBox"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="PersonalPhoneNumber" PreviewTextInput="NumberValidationTextBox"/>
+                <Label Content="Личный телефон"/>
+                <TextBox x:Name="PersonalPhoneNumberTB" PreviewTextInput="NumberValidationTextBox"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="status" PreviewTextInput="NumberValidationTextBox"/>
+                <Label Content="Статус"/>
+                <TextBox x:Name="statusTB" PreviewTextInput="NumberValidationTextBox"/>
             </StackPanel>
             <StackPanel Margin="10">
-                <Label Content="Значение"/>
-                <TextBox x:Name="Note"/>
+                <Label Content="Заметки"/>
+                <TextBox x:Name="NoteTB"/>
             </StackPanel>
-        </StackPanel>
+        </WrapPanel>
         <DataGrid x:Name="StuffsDataGrid" Grid.Row="1" Grid.ColumnSpan="2" Background="{DynamicResource Tranceparent}" Margin="10" IsMouseCapturedChanged="UnitsDataGrid_IsMouseCapturedChanged" />
     </Grid>
 </UserControl>

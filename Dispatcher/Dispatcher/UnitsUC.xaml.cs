@@ -63,64 +63,10 @@ namespace Dispatcher
             SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
         }
 
-        private void fun()
-        {
-            DataRowView row = UnitsDataGrid.SelectedItem as DataRowView;
-            try
-            {
-                id.Text = row.Row.ItemArray[0].ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private object[] MyGetArray(DataGrid dataGrid)
-        {
-            try
-            {
-                DataRowView row = dataGrid.SelectedItem as DataRowView;
-                return row.Row.ItemArray;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-        }
-
-        private void fun2(int i)
-        {
-            try
-            {
-                object[] array = MyGetArray(UnitsDataGrid);
-                MessageBox.Show(array[i].ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private string MyGetItemArray(int i)
-        {
-            try
-            {
-                object[] array = MyGetArray(UnitsDataGrid);
-                return array[i].ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-        }
-
         private void UnitsDataGrid_IsMouseCapturedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            id.Text = MyGetItemArray(0);
-            name.Text = MyGetItemArray(1);
+            id.Text = SQLClass.MyGetItemArray(UnitsDataGrid, 0);
+            name.Text = SQLClass.MyGetItemArray(UnitsDataGrid, 1);
         }
     }
 }
