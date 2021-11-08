@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Dispatcher"
              mc:Ignorable="d" 
              d:DesignHeight="280" d:DesignWidth="200">
-    <Grid Background="{DynamicResource BackSecondLevel}">
+    <Grid Background="{DynamicResource FrontFirstLevel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="170"/>
             <RowDefinition/>
@@ -36,6 +36,7 @@
                             SelectedDateChanged="SecondDatePicker_SelectedDateChanged"/>
                 <Button x:Name="Default"
                         Grid.Row="1" Grid.ColumnSpan="2"
+                        Background="{DynamicResource FrontThirdLevel}"
                         Height="30" Margin="10" Content="Сброс"
                         Click="Default_Click"/>
             </Grid>

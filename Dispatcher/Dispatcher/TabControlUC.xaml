@@ -21,7 +21,7 @@
             <local:DistrictUC/>
         </TabItem>
         <TabItem Header="Склад">
-            <TabControl>
+            <TabControl Background="{DynamicResource BackThirdLevel}">
                 <TabItem Header="Расходники">
                 </TabItem>
                 <TabItem Header="Среды">
@@ -53,12 +53,6 @@
 
                 </TabItem>
             </TabControl>
-        </TabItem>
-        <TabItem Header="TEST">
-            <local:TestDataGridUC/>
-        </TabItem>
-        <TabItem Header="Test2">
-            <local:TestUserControl/>
         </TabItem>
     </TabControl>
 </UserControl>

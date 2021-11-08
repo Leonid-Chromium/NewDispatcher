@@ -48,13 +48,14 @@ namespace Dispatcher
 
         private void SettingsSpaceControle(Grid grid)
         {
-            if(grid == ActualSettingsSpace)
+            if(grid == ActualSettingsSpace && ActualSettingsSpace.Visibility != Visibility.Collapsed)
             {
                 grid.Visibility = Visibility.Collapsed;
             }
             else
             {
-                ActualSettingsSpace.Visibility = Visibility.Collapsed;
+                if(ActualSettingsSpace != null)
+                    ActualSettingsSpace.Visibility = Visibility.Collapsed;
                 grid.Visibility = Visibility.Visible;
             }
             ActualSettingsSpace = grid;
@@ -68,6 +69,51 @@ namespace Dispatcher
         private void StyleButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void SetBusiness_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("Business");
+        }
+
+        private void SetAzalea_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("Azalea");
+        }
+
+        private void SetBananaGrape_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("BananaGrape");
+        }
+
+        private void SetHotLava_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("HotLava");
+        }
+
+        private void SetInvigoratingCoffee_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("InvigoratingCoffee");
+        }
+
+        private void SetLawn_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("Lawn");
+        }
+
+        private void SetSeaBreeze_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("SeaBreeze");
+        }
+
+        private void SetStarSky_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("StarSky");
+        }
+
+        private void SetSunnyBeach_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeClass.MyThemeChange("SunnyBeach");
         }
     }
 }

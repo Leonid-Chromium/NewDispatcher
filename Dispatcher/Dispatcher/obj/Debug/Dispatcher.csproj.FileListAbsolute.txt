@@ -43,3 +43,13 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StuffsUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StuffsUC.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TestUserControl.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\TestUserControl.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Style\TabItemStyle.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Business.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\SunnyBeach.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Azalea.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\BananaGrape.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\HotLava.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\InvigoratingCoffee.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Lawn.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\SeaBreeze.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\StarSky.baml

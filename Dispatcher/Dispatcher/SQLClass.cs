@@ -19,6 +19,9 @@ namespace Dispatcher
             string connectionString = Properties.Settings.Default.SqlConnectionString;
             string sqlExpression = sqlString;
 
+            Trace.WriteLine("Connection sring = " + connectionString);
+            Trace.WriteLine("Query = " + sqlExpression);
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -35,6 +38,9 @@ namespace Dispatcher
         {
             string connectionString = Properties.Settings.Default.SqlConnectionString;
             string sqlExpression = sqlString;
+
+            Trace.WriteLine("Connection sring = " + connectionString);
+            Trace.WriteLine("Query = " + sqlExpression);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

@@ -20,7 +20,8 @@
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <local:CalendarUC x:Name="CalendarUC" Grid.Column="0" Grid.Row="0"/>
-            <Grid Grid.Column="0" Grid.Row="2" Background="{DynamicResource BackSecondLevel}">
+            <Border Grid.Column="0" Grid.Row="1" Background="{DynamicResource BackThirdLevel}"/>
+            <Grid Grid.Column="0" Grid.Row="2" Background="{DynamicResource FrontFirstLevel}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>

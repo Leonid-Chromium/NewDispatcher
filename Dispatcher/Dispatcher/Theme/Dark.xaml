@@ -5,6 +5,8 @@
     <SolidColorBrush x:Key="BackFirstLevel" Color="#404040"/>
     <SolidColorBrush x:Key="BackSecondLevel" Color="#656565"/>
     <SolidColorBrush x:Key="BackThirdLevel" Color="#757575"/>
-    
-    <SolidColorBrush x:Key="FrontFirstLevel" Color="#2935c2"/>
+
+    <SolidColorBrush x:Key="FrontFirstLevel" Color="#BD0000"/>
+    <SolidColorBrush x:Key="FrontSecondLevel" Color="#C4C4C4"/>
+    <SolidColorBrush x:Key="FrontThirdLevel" Color="#E2E2E2"/>
 </ResourceDictionary>
