@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Dispatcher"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
         Title="Главное окно" Icon="Assets/Icon/Wafer.png" Height="720" Width="1280">
     
     <Grid Background="{DynamicResource BackFirstLevel}">
@@ -26,10 +27,17 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" HorizontalAlignment="Left" Width="50" Margin="25" Click="SettingsButton_Click">
+                <Button Grid.Column="0"
+                        HorizontalAlignment="Left"
+                        Width="50" Margin="25"
+                        Background="{DynamicResource FrontThirdLevel}"
+                        Click="SettingsButton_Click">
                     <Image Source="/Assets/Icon/Cogwheel.png" />
                 </Button>
-                <Button Grid.Column="1" HorizontalAlignment="Right" Width="50" Margin="25"/>
+                <Button Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        Width="50" Margin="25"
+                        Background="{DynamicResource FrontThirdLevel}"/>
             </Grid>
             <local:TabControlUC x:Name="TabSpace" Grid.Column="2" Grid.RowSpan="3"/>
         </Grid>

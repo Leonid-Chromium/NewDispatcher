@@ -71,11 +71,20 @@
     <Compile Include="DistrictUC.xaml.cs">
       <DependentUpon>DistrictUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EquipmentStatusUC.xaml.cs">
+      <DependentUpon>EquipmentStatusUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostUC.xaml.cs">
+      <DependentUpon>PostUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="SQLClass.cs" />
+    <Compile Include="StuffStatusUC.xaml.cs">
+      <DependentUpon>StuffStatusUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StuffsUC.xaml.cs">
       <DependentUpon>StuffsUC.xaml</DependentUpon>
     </Compile>
@@ -104,6 +113,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EquipmentStatusUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -119,7 +132,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PostUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SettingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StuffStatusUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

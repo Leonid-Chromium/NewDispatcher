@@ -35,13 +35,13 @@
                     <local:UnitsUC/>
                 </TabItem>
                 <TabItem Header="Статусы персонала">
-
+                    <local:StuffStatusUC/>
                 </TabItem>
                 <TabItem Header="Статусы оборудования">
-
+                    <local:EquipmentStatusUC/>
                 </TabItem>
                 <TabItem Header="Должности">
-
+                    <local:PostUC/>
                 </TabItem>
                 <TabItem Header="Тех. карты">
 

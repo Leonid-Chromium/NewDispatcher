@@ -53,3 +53,9 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\InvigoratingC
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\Lawn.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\SeaBreeze.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\Theme\StarSky.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StuffStatusUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StuffStatusUC.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\EquipmentStatusUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\EquipmentStatusUC.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\PostUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\PostUC.baml
