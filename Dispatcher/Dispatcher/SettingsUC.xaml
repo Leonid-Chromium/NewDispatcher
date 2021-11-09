@@ -34,7 +34,7 @@
               Grid.Column="1" Grid.RowSpan="2"
               Visibility="Visible"
               Background="{DynamicResource BackSecondLevel}">
-            <WrapPanel ItemHeight="140" ItemWidth="192">
+            <WrapPanel ItemHeight="280" ItemWidth="384">
                 <WrapPanel.Resources>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Margin" Value="10,10" />
