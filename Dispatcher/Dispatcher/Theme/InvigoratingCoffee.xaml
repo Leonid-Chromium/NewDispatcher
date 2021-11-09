@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="Tranceparent" Color="#00000000"/>
+
+    <SolidColorBrush x:Key="BackFirstLevel" Color="#461900"/>
+    <SolidColorBrush x:Key="BackSecondLevel" Color="#793C04"/>
+    <SolidColorBrush x:Key="BackThirdLevel" Color="#BD9571"/>
+
+    <SolidColorBrush x:Key="FrontFirstLevel" Color="#FF5F04"/>
+    <SolidColorBrush x:Key="FrontSecondLevel" Color="#C4C4C4"/>
+    <SolidColorBrush x:Key="FrontThirdLevel" Color="#425EC0"/>
+</ResourceDictionary>

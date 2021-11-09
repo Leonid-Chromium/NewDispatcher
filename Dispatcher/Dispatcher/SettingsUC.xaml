@@ -6,22 +6,121 @@
              xmlns:local="clr-namespace:Dispatcher"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    
+    <Grid Background="{DynamicResource BackFirstLevel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
-            <ColumnDefinition/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Content="Назад" Margin="10" Width="80" Click="Button_Click"/>
+        
+        <Button Grid.Column="0" Grid.Row="0"
+                Content="Назад" Margin="10"  Height="40"
+                Click="Button_Click"/>
+
         <StackPanel Grid.Column="0" Grid.Row="1">
-            <Button Content="Стили" Margin="5"/>
-            <Button Content="Темы" Margin="5"/>
+            <Button x:Name="ThemeButton"
+                    Content="Темы" Margin="10" Height="40"
+                    Click="ThemeButton_Click"/>
+            <Button x:Name="StyleButton"
+                    Content="Стили" Margin="10" Height="40"
+                    Click="StyleButton_Click"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.RowSpan="2">
-            <Label Content="Список настрое раздела"/>
-        </StackPanel>
+
+        <Grid x:Name="Themes"
+              Grid.Column="1" Grid.RowSpan="2"
+              Visibility="Visible"
+              Background="{DynamicResource BackSecondLevel}">
+            <WrapPanel ItemHeight="140" ItemWidth="192">
+                <WrapPanel.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Margin" Value="10,10" />
+                        <Setter Property="Background" Value="{DynamicResource Tranceparent}"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background ="{TemplateBinding Background}" CornerRadius="10"
+                                            BorderThickness="2"
+                                            BorderBrush="White"
+                                            Padding="10,10">
+
+                                        <ContentPresenter HorizontalAlignment ="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </WrapPanel.Resources>
+                
+                <Button x:Name="SetDarkSide"
+                        ToolTip="Set Dark"
+                    Click="SetDarkSide_Click">
+                    <Image Source="/Assets/ThemeIcon/Dark.png" />
+                </Button>
+
+                <Button x:Name="SetLightSide"
+                        ToolTip="Set Light"
+                    Click="SetLightSide_Click">
+                    <Image Source="/Assets/ThemeIcon/Light.png" />
+                </Button>
+
+                <Button x:Name="SetAzalea"
+                    ToolTip="Set Azalea"
+                    Click="SetAzalea_Click">
+                    <Image Source="/Assets/ThemeIcon/Azalea.png" />
+                </Button>
+
+                <Button x:Name="SetBananaGrape"
+                    ToolTip="Set BananaGrape"
+                    Click="SetBananaGrape_Click">
+                    <Image Source="/Assets/ThemeIcon/BananaGrape.png" />
+                </Button>
+
+                <Button x:Name="SetBusiness"
+                    ToolTip="Set Business"
+                    Click="SetBusiness_Click">
+                    <Image Source="/Assets/ThemeIcon/Business.png" />
+                </Button>
+
+                <Button x:Name="SetHotLava"
+                    ToolTip="Set HotLava"
+                    Click="SetHotLava_Click">
+                    <Image Source="/Assets/ThemeIcon/HotLava.png" />
+                </Button>
+
+                <Button x:Name="SetInvigoratingCoffee"
+                    ToolTip="Set InvigoratingCoffee"
+                    Click="SetInvigoratingCoffee_Click">
+                    <Image Source="/Assets/ThemeIcon/Invigorating coffee.png" />
+                </Button>
+
+                <Button x:Name="SetLawn"
+                    ToolTip="Set Lawn"
+                    Click="SetLawn_Click">
+                    <Image Source="/Assets/ThemeIcon/Lawn.png" />
+                </Button>
+
+                <Button x:Name="SetSeaBreeze"
+                    ToolTip="Set SeaBreeze"
+                    Click="SetSeaBreeze_Click">
+                    <Image Source="/Assets/ThemeIcon/SeaBreeze.png" />
+                </Button>
+
+                <Button x:Name="SetStarSky"
+                    ToolTip="Set StarSky"
+                    Click="SetStarSky_Click">
+                    <Image Source="/Assets/ThemeIcon/StarSky.png" />
+                </Button>
+
+                <Button x:Name="SetSunnyBeach"
+                    ToolTip="Set SunnyBeach"
+                    Click="SetSunnyBeach_Click">
+                    <Image Source="/Assets/ThemeIcon/SunnyBeach.png" />
+                </Button>
+            </WrapPanel>
+        </Grid>
     </Grid>
 </UserControl>

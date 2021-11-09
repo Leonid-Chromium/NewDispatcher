@@ -5,5 +5,8 @@
     <Setting Name="SqlConnectionString" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Source=DESKTOP-LEONID\SQLEXPRESS;Initial Catalog=NewDispatcher;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="ThemeSettings" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Business</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

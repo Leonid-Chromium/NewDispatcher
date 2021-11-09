@@ -71,16 +71,33 @@
     <Compile Include="DistrictUC.xaml.cs">
       <DependentUpon>DistrictUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EquipmentStatusUC.xaml.cs">
+      <DependentUpon>EquipmentStatusUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostUC.xaml.cs">
+      <DependentUpon>PostUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="SQLClass.cs" />
+    <Compile Include="StuffStatusUC.xaml.cs">
+      <DependentUpon>StuffStatusUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StuffsUC.xaml.cs">
+      <DependentUpon>StuffsUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TabControlUC.xaml.cs">
       <DependentUpon>TabControlUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestDataGridUC.xaml.cs">
       <DependentUpon>TestDataGridUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TestUserControl.xaml.cs">
+      <DependentUpon>TestUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeClass.cs" />
     <Compile Include="UnitsUC.xaml.cs">
       <DependentUpon>UnitsUC.xaml</DependentUpon>
     </Compile>
@@ -93,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DistrictUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentStatusUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,7 +132,35 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PostUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SettingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StuffStatusUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StuffsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\Artem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\CalendarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\Round.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\TabItemStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -120,6 +169,54 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TestDataGridUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Azalea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\BananaGrape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Business.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Dark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\HotLava.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\InvigoratingCoffee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Lawn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Light.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\SeaBreeze.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\StarSky.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\SunnyBeach.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,7 +245,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
@@ -173,6 +270,20 @@
     <Resource Include="Assets\Icon\Delete.png" />
     <Resource Include="Assets\Icon\Done.png" />
     <Resource Include="Assets\Icon\Upgrade.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\ThemeIcon\Azalea.png" />
+    <Resource Include="Assets\ThemeIcon\BananaGrape.png" />
+    <Resource Include="Assets\ThemeIcon\Business.png" />
+    <Resource Include="Assets\ThemeIcon\Dark.png" />
+    <Resource Include="Assets\ThemeIcon\HotLava.png" />
+    <Resource Include="Assets\ThemeIcon\Invigorating coffee.png" />
+    <Resource Include="Assets\ThemeIcon\Lawn.png" />
+    <Resource Include="Assets\ThemeIcon\Light.png" />
+    <Resource Include="Assets\ThemeIcon\SeaBreeze.png" />
+    <Resource Include="Assets\ThemeIcon\StarSky.png" />
+    <Resource Include="Assets\ThemeIcon\SunnyBeach.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dispatcher"
         mc:Ignorable="d"
-        Title="AuthorizationWindow" Height="450" Width="250">
-    <Grid>
+        WindowStartupLocation="CenterScreen"
+        Title="Авторизация" Icon="Assets/Icon/Wafer.png" Height="450" Width="250">
+    <Grid Background="{DynamicResource BackFirstLevel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>

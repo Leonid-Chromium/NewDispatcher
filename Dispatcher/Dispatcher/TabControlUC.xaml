@@ -7,12 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
-    <TabControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <TabControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Background="{DynamicResource BackSecondLevel}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <TabItem Header="Партии">
 
         </TabItem>
         <TabItem Header="Сотрудники">
-
+            <local:StuffsUC/>
         </TabItem>
         <TabItem Header="Оборудование">
 
@@ -21,7 +21,7 @@
             <local:DistrictUC/>
         </TabItem>
         <TabItem Header="Склад">
-            <TabControl>
+            <TabControl Background="{DynamicResource BackThirdLevel}">
                 <TabItem Header="Расходники">
                 </TabItem>
                 <TabItem Header="Среды">
@@ -30,18 +30,18 @@
             </TabControl>
         </TabItem>
         <TabItem Header="Редакторы">
-            <TabControl>
+            <TabControl Background="{DynamicResource BackThirdLevel}">
                 <TabItem Header="Единицы измерения">
                     <local:UnitsUC/>
                 </TabItem>
                 <TabItem Header="Статусы персонала">
-
+                    <local:StuffStatusUC/>
                 </TabItem>
                 <TabItem Header="Статусы оборудования">
-
+                    <local:EquipmentStatusUC/>
                 </TabItem>
                 <TabItem Header="Должности">
-
+                    <local:PostUC/>
                 </TabItem>
                 <TabItem Header="Тех. карты">
 
@@ -53,9 +53,6 @@
 
                 </TabItem>
             </TabControl>
-        </TabItem>
-        <TabItem Header="TEST">
-            <local:TestDataGridUC/>
         </TabItem>
     </TabControl>
 </UserControl>
