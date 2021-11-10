@@ -61,3 +61,5 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\PostUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\PostUC.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StandartDataUC.g.cs
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\StandartDataUC.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\BatchUC.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\BatchUC.baml
