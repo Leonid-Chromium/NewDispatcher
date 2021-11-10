@@ -15,38 +15,54 @@ namespace Dispatcher
     {
         public static void ReturnSQL(DataGrid dataGrid, String sqlString)
         {
-            SqlDataAdapter adapter;
-            string connectionString = Properties.Settings.Default.SqlConnectionString;
-            string sqlExpression = sqlString;
-
-            Trace.WriteLine("Connection sring = " + connectionString);
-            Trace.WriteLine("Query = " + sqlExpression);
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                SqlDataAdapter adapter;
+                string connectionString = Properties.Settings.Default.SqlConnectionString;
+                string sqlExpression = sqlString;
 
-                adapter = new SqlDataAdapter(sqlExpression, connectionString);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                dataGrid.ItemsSource = table.DefaultView;
+                Trace.WriteLine("Connection sring = " + connectionString);
+                Trace.WriteLine("Query = " + sqlExpression);
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand(sqlExpression, connection);
+
+                    adapter = new SqlDataAdapter(sqlExpression, connectionString);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    dataGrid.ItemsSource = table.DefaultView;
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         public static void NoReturnSQL(String sqlString)
         {
-            string connectionString = Properties.Settings.Default.SqlConnectionString;
-            string sqlExpression = sqlString;
-
-            Trace.WriteLine("Connection sring = " + connectionString);
-            Trace.WriteLine("Query = " + sqlExpression);
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand(sqlExpression, connection);
-                command.ExecuteNonQuery(); //Выполнение запроса без возращения данных
+                string connectionString = Properties.Settings.Default.SqlConnectionString;
+                string sqlExpression = sqlString;
+
+                Trace.WriteLine("Connection sring = " + connectionString);
+                Trace.WriteLine("Query = " + sqlExpression);
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand(sqlExpression, connection);
+                    command.ExecuteNonQuery(); //Выполнение запроса без возращения данных
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -86,6 +102,36 @@ namespace Dispatcher
             string resultStr = String.Join(", ", valueСollection);
             Trace.WriteLine(resultStr);
             return resultStr;
+        }
+
+        public static int GetCollumnCount(string dataTable)
+        {
+            string connectionString = Properties.Settings.Default.SqlConnectionString;
+            string sqlExpression = String.Format("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{0}'", dataTable);
+
+            Trace.WriteLine("Connection sring = " + connectionString);
+            Trace.WriteLine("Query = " + sqlExpression);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+
+                string result = "0";
+
+                // Call Read before accessing data.
+                while (sqlDataReader.Read())
+                {
+                    result = sqlDataReader[0].ToString();
+                }
+
+                // Call Close when done reading.
+                sqlDataReader.Close();
+                connection.Close();
+
+                return Convert.ToInt32(result);
+            }
         }
     }
 }

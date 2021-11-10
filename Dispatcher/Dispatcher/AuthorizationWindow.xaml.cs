@@ -31,6 +31,8 @@ namespace Dispatcher
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
+            ComboBoxItem ComboItem = (ComboBoxItem)RoleComboBox.SelectedItem;
+            mainWindow.SetRole(Convert.ToInt32(ComboItem.Tag));
             this.Close();
         }
 

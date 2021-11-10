@@ -82,6 +82,9 @@
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="SQLClass.cs" />
+    <Compile Include="StandartDataUC.xaml.cs">
+      <DependentUpon>StandartDataUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StuffStatusUC.xaml.cs">
       <DependentUpon>StuffStatusUC.xaml</DependentUpon>
     </Compile>
@@ -137,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StandartDataUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
