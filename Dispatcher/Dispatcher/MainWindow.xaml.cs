@@ -48,7 +48,10 @@ namespace Dispatcher
                     if (role == 0)
                         TabSpace.TabEquipment.Visibility = Visibility.Collapsed;
                     else
+                    {
                         TabSpace.TabBatch.Visibility = Visibility.Collapsed;
+                        TabSpace.TabControlFirstLevel.SelectedItem = TabSpace.TabEquipment;
+                    }
                 }
             }
         }

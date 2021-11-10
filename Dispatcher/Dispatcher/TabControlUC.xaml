@@ -7,7 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
-    <TabControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Background="{DynamicResource BackSecondLevel}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <TabControl
+        x:Name="TabControlFirstLevel"
+        Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"
+        Background="{DynamicResource BackSecondLevel}"
+        HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <TabItem Header="Партии" x:Name="TabBatch">
             <local:BatchUC/>
         </TabItem>
