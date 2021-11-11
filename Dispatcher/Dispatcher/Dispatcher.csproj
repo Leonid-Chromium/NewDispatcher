@@ -77,6 +77,9 @@
     <Compile Include="EquipmentStatusUC.xaml.cs">
       <DependentUpon>EquipmentStatusUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EquipmentUC.xaml.cs">
+      <DependentUpon>EquipmentUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PostUC.xaml.cs">
       <DependentUpon>PostUC.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EquipmentStatusUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

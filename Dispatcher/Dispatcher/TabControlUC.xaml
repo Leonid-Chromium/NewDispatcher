@@ -19,7 +19,7 @@
             <local:StuffsUC/>
         </TabItem>
         <TabItem Header="Оборудование" x:Name="TabEquipment">
-
+            <local:EquipmentUC/>
         </TabItem>
         <TabItem Header="Участки" x:Name="TabDistrict">
             <local:DistrictUC/>
