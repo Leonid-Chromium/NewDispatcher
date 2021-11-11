@@ -25,19 +25,19 @@
             <Grid Grid.Column="0" Grid.Row="2" Background="{DynamicResource FrontFirstLevel}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <!--<ColumnDefinition/>-->
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0"
-                        HorizontalAlignment="Left"
+                        HorizontalAlignment="Center"
                         Width="50" Margin="25"
                         Background="{DynamicResource FrontThirdLevel}"
                         Click="SettingsButton_Click">
                     <Image Source="/Assets/Icon/Cogwheel.png" />
                 </Button>
-                <Button Grid.Column="1"
+                <!--<Button Grid.Column="1"
                         HorizontalAlignment="Right"
                         Width="50" Margin="25"
-                        Background="{DynamicResource FrontThirdLevel}"/>
+                        Background="{DynamicResource FrontThirdLevel}"/>-->
             </Grid>
             <local:TabControlUC x:Name="TabSpace" Grid.Column="2" Grid.RowSpan="3"/>
         </Grid>

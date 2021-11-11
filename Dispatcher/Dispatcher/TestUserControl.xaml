@@ -11,7 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
-            <RowDefinition/>
+            <!--<RowDefinition/>-->
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0">
             <Button x:Name="TestButton" Content="Тестовая кнопка" Click="TestButton_Click"/>
@@ -19,14 +19,14 @@
         </WrapPanel>
         <StackPanel Orientation="Vertical" Grid.Row="1">
             <TextBox x:Name="QueryTB"/>
-            <Button x:Name="QueryButton" Content="Батон" Click="QueryButton_Click"/>
-            <Button x:Name="CButton" Content="Це батон" Click="CButton_Click"/>
-            <TextBox x:Name="OutTB"/>
+            <Button x:Name="QueryButton" Content="Отправить запрос" Click="QueryButton_Click"/>
+            <Button x:Name="CButton" Content="Це батон" Click="CButton_Click" Visibility="Collapsed"/>
+            <TextBox x:Name="OutTB" Visibility="Collapsed"/>
             <DataGrid x:Name="QueryDG"/>
         </StackPanel>
         <StackPanel Grid.Row="2">
-            <Button x:Name="AddButton" Content="AddButton" Click="AddButton_Click"/>
-            <ListBox x:Name="FieldsListBox" Height="200">
+            <Button x:Name="AddButton" Content="AddButton" Click="AddButton_Click" Visibility="Collapsed"/>
+            <ListBox x:Name="FieldsListBox" Height="200" Visibility="Collapsed">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
