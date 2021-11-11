@@ -115,5 +115,31 @@ namespace Dispatcher
         {
             ThemeClass.MyThemeChange("SunnyBeach");
         }
+
+        private void TextChanged(object sender, TextChangedEventArgs e)
+        {
+            conStrTB.Text = String.Format("Data Source=" + dataSourseTB.Text + ";Initial Catalog=" + initialCatalogTB.Text + ";Integrated Security=" + integratedSecurityTB.Text);
+        }
+
+        private void SQLButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsSpaceControle(SQLSet);
+        }
+
+        private void setConnectString_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.SqlConnectionString = conStrTB.Text;
+
+            Properties.Settings.Default.Save();
+            Properties.Settings.Default.Reload();
+        }
+
+        private void SQLSet_Loaded(object sender, RoutedEventArgs e)
+        {
+            conStrTB.Text = Properties.Settings.Default.SqlConnectionString;
+
+            Properties.Settings.Default.Save();
+            Properties.Settings.Default.Reload();
+        }
     }
 }

@@ -28,6 +28,9 @@
             <Button x:Name="StyleButton"
                     Content="Стили" Margin="10" Height="40"
                     Click="StyleButton_Click"/>
+            <Button x:Name="SQLButton"
+                    Content="Подключение Сервера" Margin="10" Height="40"
+                    Click="SQLButton_Click"/>
         </StackPanel>
 
         <Grid x:Name="Themes"
@@ -120,6 +123,22 @@
                     Click="SetSunnyBeach_Click">
                     <Image Source="/Assets/ThemeIcon/SunnyBeach.png" />
                 </Button>
+            </WrapPanel>
+        </Grid>
+        <Grid x:Name="SQLSet"
+              Grid.Column="1" Grid.RowSpan="2"
+              Visibility="Collapsed"
+              Background="{DynamicResource BackSecondLevel}"
+              Loaded="SQLSet_Loaded">
+            <WrapPanel Orientation="Vertical">
+                <Label Content="Data sourse"/>
+                <TextBox x:Name="dataSourseTB" TextChanged="TextChanged"/>
+                <Label Content="Initial Catalog"/>
+                <TextBox x:Name="initialCatalogTB" TextChanged="TextChanged"/>
+                <Label Content="Integrated Security"/>
+                <TextBox x:Name="integratedSecurityTB" TextChanged="TextChanged"/>
+                <TextBox x:Name="conStrTB"/>
+                <Button x:Name="setConnectString" Content="Использовать строку подключения" Click="setConnectString_Click"/>
             </WrapPanel>
         </Grid>
     </Grid>

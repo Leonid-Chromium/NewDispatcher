@@ -78,5 +78,13 @@ namespace Dispatcher
                 MessageBox.Show("Неправильный пароль");
             }
         }
+
+        private void DefSqlCon_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.SqlConnectionString = @"Data Source=DESKTOP-LEONID\SQLEXPRESS;Initial Catalog=NewDispatcher;Integrated Security=True";
+
+            Properties.Settings.Default.Save();
+            Properties.Settings.Default.Reload();
+        }
     }
 }
