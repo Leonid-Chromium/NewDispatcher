@@ -7,20 +7,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
-    <TabControl Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Background="{DynamicResource BackSecondLevel}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <TabItem Header="Партии">
-
+    <TabControl
+        x:Name="TabControlFirstLevel"
+        Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"
+        Background="{DynamicResource BackSecondLevel}"
+        HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TabItem Header="Партии" x:Name="TabBatch">
+            <local:BatchUC/>
         </TabItem>
-        <TabItem Header="Сотрудники">
+        <TabItem Header="Сотрудники" x:Name="TabStuff">
             <local:StuffsUC/>
         </TabItem>
-        <TabItem Header="Оборудование">
-
+        <TabItem Header="Оборудование" x:Name="TabEquipment">
+            <local:EquipmentUC/>
         </TabItem>
-        <TabItem Header="Участки">
+        <TabItem Header="Участки" x:Name="TabDistrict">
             <local:DistrictUC/>
         </TabItem>
-        <TabItem Header="Склад">
+        <TabItem Header="Склад" x:Name="TabStore">
             <TabControl Background="{DynamicResource BackThirdLevel}">
                 <TabItem Header="Расходники">
                 </TabItem>
@@ -29,7 +33,7 @@
                 </TabItem>
             </TabControl>
         </TabItem>
-        <TabItem Header="Редакторы">
+        <TabItem Header="Редакторы" x:Name="TabEditors">
             <TabControl Background="{DynamicResource BackThirdLevel}">
                 <TabItem Header="Единицы измерения">
                     <local:UnitsUC/>
@@ -51,6 +55,16 @@
                 </TabItem>
                 <TabItem Header="Устройства">
 
+                </TabItem>
+            </TabControl>
+        </TabItem>
+        <TabItem Header="Test" x:Name="TabTest">
+            <TabControl>
+                <TabItem Header="Тест 1">
+                    <local:TestUserControl/>
+                </TabItem>
+                <TabItem Header="Тест 2">
+                    <local:StandartDataUC DataTable="Units"/>
                 </TabItem>
             </TabControl>
         </TabItem>

@@ -37,30 +37,30 @@ namespace Dispatcher
 
         private void UnitsUC_Loaded(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
+            SQLClass.ReturnSQL(UnitsDataGrid, String.Format("SELECT * FROM Units"));
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
+            SQLClass.ReturnSQL(UnitsDataGrid, "SELECT * FROM Units");
         }
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLInsert("Units", name.Text);
-            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
+            SQLClass.NoReturnSQL(String.Format("INSERT INTO Units (Name) VALUES ('{0}')", name.Text));
+            SQLClass.ReturnSQL(UnitsDataGrid, String.Format("SELECT * FROM Units"));
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLDelite("Units", Convert.ToInt32(id.Text));
-            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
+            SQLClass.NoReturnSQL(String.Format("DELETE FROM Units WHERE ID={0}", id.Text));
+            SQLClass.ReturnSQL(UnitsDataGrid, String.Format("SELECT * FROM Units"));
         }
 
         private void UpgradeButton_Click(object sender, RoutedEventArgs e)
         {
-            SQLClass.UltimateSQLUpdate("Units", Convert.ToInt32(id.Text), name.Text);
-            SQLClass.UltimateSQLSelect(UnitsDataGrid, "Units");
+            SQLClass.NoReturnSQL(String.Format("UPDATE Units SET Name='{0}' WHERE ID={1}", name.Text, id.Text));
+            SQLClass.ReturnSQL(UnitsDataGrid, String.Format("SELECT * FROM Units"));
         }
 
         private void UnitsDataGrid_IsMouseCapturedChanged(object sender, DependencyPropertyChangedEventArgs e)

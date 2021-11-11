@@ -65,6 +65,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BatchUC.xaml.cs">
+      <DependentUpon>BatchUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CalendarUC.xaml.cs">
       <DependentUpon>CalendarUC.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,9 @@
     <Compile Include="EquipmentStatusUC.xaml.cs">
       <DependentUpon>EquipmentStatusUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EquipmentUC.xaml.cs">
+      <DependentUpon>EquipmentUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PostUC.xaml.cs">
       <DependentUpon>PostUC.xaml</DependentUpon>
     </Compile>
@@ -82,6 +88,9 @@
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="SQLClass.cs" />
+    <Compile Include="StandartDataUC.xaml.cs">
+      <DependentUpon>StandartDataUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StuffStatusUC.xaml.cs">
       <DependentUpon>StuffStatusUC.xaml</DependentUpon>
     </Compile>
@@ -105,6 +114,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BatchUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CalendarUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -114,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EquipmentStatusUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EquipmentUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -137,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StandartDataUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
