@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\App.xaml
-311866088659
+32-1374780402
 
-24-1611082853
+25-856083872
 182071080061
-AuthorizationWindow.xaml;BatchUC.xaml;CalendarUC.xaml;DistrictUC.xaml;EquipmentStatusUC.xaml;EquipmentUC.xaml;MainWindow.xaml;PostUC.xaml;SettingsUC.xaml;StandartDataUC.xaml;StuffStatusUC.xaml;StuffsUC.xaml;Style\Artem.xaml;Style\CalendarStyle.xaml;Style\Round.xaml;Style\TabItemStyle.xaml;TabControlUC.xaml;TestDataGridUC.xaml;TestUserControl.xaml;Theme\Azalea.xaml;Theme\BananaGrape.xaml;Theme\Business.xaml;Theme\Dark.xaml;Theme\HotLava.xaml;Theme\InvigoratingCoffee.xaml;Theme\Lawn.xaml;Theme\Light.xaml;Theme\SeaBreeze.xaml;Theme\StarSky.xaml;Theme\SunnyBeach.xaml;UnitsUC.xaml;
+AuthorizationWindow.xaml;BatchUC.xaml;CalendarUC.xaml;DistrictUC.xaml;EquipmentStatusUC.xaml;EquipmentUC.xaml;MainWindow.xaml;NewEquipment.xaml;PostUC.xaml;SettingsUC.xaml;StandartDataUC.xaml;StuffStatusUC.xaml;StuffsUC.xaml;Style\Artem.xaml;Style\CalendarStyle.xaml;Style\Round.xaml;Style\TabItemStyle.xaml;TabControlUC.xaml;TestDataGridUC.xaml;TestUserControl.xaml;Theme\Azalea.xaml;Theme\BananaGrape.xaml;Theme\Business.xaml;Theme\Dark.xaml;Theme\HotLava.xaml;Theme\InvigoratingCoffee.xaml;Theme\Lawn.xaml;Theme\Light.xaml;Theme\SeaBreeze.xaml;Theme\StarSky.xaml;Theme\SunnyBeach.xaml;UnitsUC.xaml;
 
-False
+True
 

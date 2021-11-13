@@ -80,6 +80,9 @@
     <Compile Include="EquipmentUC.xaml.cs">
       <DependentUpon>EquipmentUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewEquipment.xaml.cs">
+      <DependentUpon>NewEquipment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PostUC.xaml.cs">
       <DependentUpon>PostUC.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NewEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PostUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
