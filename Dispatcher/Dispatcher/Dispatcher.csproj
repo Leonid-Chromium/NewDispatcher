@@ -65,29 +65,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BatchUC.xaml.cs">
+    <Compile Include="UCs\BatchUC.xaml.cs">
       <DependentUpon>BatchUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CalendarUC.xaml.cs">
+    <Compile Include="UCs\CalendarUC.xaml.cs">
       <DependentUpon>CalendarUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DistrictUC.xaml.cs">
+    <Compile Include="UCs\DistrictUC.xaml.cs">
       <DependentUpon>DistrictUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EquipmentStatusUC.xaml.cs">
+    <Compile Include="UCs\EquipmentStatusUC.xaml.cs">
       <DependentUpon>EquipmentStatusUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EquipmentUC.xaml.cs">
+    <Compile Include="UCs\EquipmentUC.xaml.cs">
       <DependentUpon>EquipmentUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="NewEquipment.xaml.cs">
       <DependentUpon>NewEquipment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PostUC.xaml.cs">
+    <Compile Include="UCs\PostUC.xaml.cs">
       <DependentUpon>PostUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="SettingsUC.xaml.cs">
+    <Compile Include="UCs\SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="SQLClass.cs" />
@@ -97,10 +97,10 @@
     <Compile Include="StuffStatusUC.xaml.cs">
       <DependentUpon>StuffStatusUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StuffsUC.xaml.cs">
+    <Compile Include="UCs\StuffsUC.xaml.cs">
       <DependentUpon>StuffsUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TabControlUC.xaml.cs">
+    <Compile Include="UCs\TabControlUC.xaml.cs">
       <DependentUpon>TabControlUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestDataGridUC.xaml.cs">
@@ -110,30 +110,30 @@
       <DependentUpon>TestUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThemeClass.cs" />
-    <Compile Include="UnitsUC.xaml.cs">
+    <Compile Include="UCs\UnitsUC.xaml.cs">
       <DependentUpon>UnitsUC.xaml</DependentUpon>
     </Compile>
     <Page Include="AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BatchUC.xaml">
+    <Page Include="UCs\BatchUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CalendarUC.xaml">
+    <Page Include="UCs\CalendarUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DistrictUC.xaml">
+    <Page Include="UCs\DistrictUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EquipmentStatusUC.xaml">
+    <Page Include="UCs\EquipmentStatusUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EquipmentUC.xaml">
+    <Page Include="UCs\EquipmentUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,11 +156,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PostUC.xaml">
+    <Page Include="UCs\PostUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SettingsUC.xaml">
+    <Page Include="UCs\SettingsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,7 +172,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StuffsUC.xaml">
+    <Page Include="UCs\StuffsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,7 +192,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TabControlUC.xaml">
+    <Page Include="UCs\TabControlUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -248,7 +248,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UnitsUC.xaml">
+    <Page Include="UCs\UnitsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -299,7 +299,9 @@
     <Resource Include="Assets\Icon\Done.png" />
     <Resource Include="Assets\Icon\Upgrade.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Windows\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\ThemeIcon\Azalea.png" />
     <Resource Include="Assets\ThemeIcon\BananaGrape.png" />

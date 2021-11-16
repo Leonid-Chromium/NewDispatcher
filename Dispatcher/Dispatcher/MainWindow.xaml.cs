@@ -61,11 +61,5 @@ namespace Dispatcher
             WorkSpace.Visibility = Visibility.Collapsed;
             Settings.Visibility = Visibility.Visible;
         }
-
-        public void SettingBack()
-        {
-            Settings.Visibility = Visibility.Collapsed;
-            WorkSpace.Visibility = Visibility.Visible;
-        }
     }
 }

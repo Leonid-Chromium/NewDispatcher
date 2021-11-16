@@ -41,7 +41,8 @@ namespace Dispatcher
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow win = (MainWindow)Window.GetWindow(this);
-            win.SettingBack();
+            win.Settings.Visibility = Visibility.Collapsed;
+            win.WorkSpace.Visibility = Visibility.Visible;
         }
 
         Grid ActualSettingsSpace;

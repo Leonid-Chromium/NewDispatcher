@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-d:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\
 Dispatcher
 none
 false
 DEBUG;TRACE
-d:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\App.xaml
-31-419397695
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\App.xaml
+321032861520
 
-24118787954
-18-1309786071
-AuthorizationWindow.xaml;BatchUC.xaml;CalendarUC.xaml;DistrictUC.xaml;EquipmentStatusUC.xaml;EquipmentUC.xaml;MainWindow.xaml;PostUC.xaml;SettingsUC.xaml;StandartDataUC.xaml;StuffStatusUC.xaml;StuffsUC.xaml;Style\Artem.xaml;Style\CalendarStyle.xaml;Style\Round.xaml;Style\TabItemStyle.xaml;TabControlUC.xaml;TestDataGridUC.xaml;TestUserControl.xaml;Theme\Azalea.xaml;Theme\BananaGrape.xaml;Theme\Business.xaml;Theme\Dark.xaml;Theme\HotLava.xaml;Theme\InvigoratingCoffee.xaml;Theme\Lawn.xaml;Theme\Light.xaml;Theme\SeaBreeze.xaml;Theme\StarSky.xaml;Theme\SunnyBeach.xaml;UnitsUC.xaml;
+24-720807643
+182071080061
+AuthorizationWindow.xaml;UCs\BatchUC.xaml;UCs\CalendarUC.xaml;UCs\DistrictUC.xaml;UCs\EquipmentStatusUC.xaml;UCs\EquipmentUC.xaml;MainWindow.xaml;NewEquipment.xaml;UCs\PostUC.xaml;UCs\SettingsUC.xaml;StandartDataUC.xaml;StuffStatusUC.xaml;UCs\StuffsUC.xaml;Style\Artem.xaml;Style\CalendarStyle.xaml;Style\Round.xaml;Style\TabItemStyle.xaml;UCs\TabControlUC.xaml;TestDataGridUC.xaml;TestUserControl.xaml;Theme\Azalea.xaml;Theme\BananaGrape.xaml;Theme\Business.xaml;Theme\Dark.xaml;Theme\HotLava.xaml;Theme\InvigoratingCoffee.xaml;Theme\Lawn.xaml;Theme\Light.xaml;Theme\SeaBreeze.xaml;Theme\StarSky.xaml;Theme\SunnyBeach.xaml;UCs\UnitsUC.xaml;
 
-True
+False
 
