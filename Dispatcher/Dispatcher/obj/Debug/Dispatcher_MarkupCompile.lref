@@ -1,20 +1,20 @@
 ﻿
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\App.xaml;;
-FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\AuthorizationWindow.xaml;;
+FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\Windows\AuthorizationWindow.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\BatchUC.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\CalendarUC.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\DistrictUC.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\EquipmentStatusUC.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\EquipmentUC.xaml;;
-FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\MainWindow.xaml;;
-FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\NewEquipment.xaml;;
+FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\Windows\MainWindow.xaml;;
+FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\NewEquipment.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\PostUC.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\SettingsUC.xaml;;
-FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\StandartDataUC.xaml;;
-FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\StuffStatusUC.xaml;;
+FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\StandartDataUC.xaml;;
+FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\StuffStatusUC.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\StuffsUC.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\TabControlUC.xaml;;
-FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\TestDataGridUC.xaml;;
-FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\TestUserControl.xaml;;
+FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\TestDataGridUC.xaml;;
+FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\TestUserControl.xaml;;
 FD:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\UCs\UnitsUC.xaml;;
 

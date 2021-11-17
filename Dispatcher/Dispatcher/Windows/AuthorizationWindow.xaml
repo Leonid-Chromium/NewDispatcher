@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Dispatcher"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Авторизация" Icon="Assets/Icon/Wafer.png" Height="450" Width="250">
+        Title="Авторизация" Height="450" Width="250">
     <Grid Background="{DynamicResource BackThirdLevel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>

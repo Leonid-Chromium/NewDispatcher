@@ -80,21 +80,21 @@
     <Compile Include="UCs\EquipmentUC.xaml.cs">
       <DependentUpon>EquipmentUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NewEquipment.xaml.cs">
+    <Compile Include="UCs\NewEquipment.xaml.cs">
       <DependentUpon>NewEquipment.xaml</DependentUpon>
     </Compile>
     <Compile Include="UCs\PostUC.xaml.cs">
       <DependentUpon>PostUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
+    <Compile Include="Class\Settings.cs" />
     <Compile Include="UCs\SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SQLClass.cs" />
-    <Compile Include="StandartDataUC.xaml.cs">
+    <Compile Include="Class\SQLClass.cs" />
+    <Compile Include="UCs\StandartDataUC.xaml.cs">
       <DependentUpon>StandartDataUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StuffStatusUC.xaml.cs">
+    <Compile Include="UCs\StuffStatusUC.xaml.cs">
       <DependentUpon>StuffStatusUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="UCs\StuffsUC.xaml.cs">
@@ -103,17 +103,17 @@
     <Compile Include="UCs\TabControlUC.xaml.cs">
       <DependentUpon>TabControlUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TestDataGridUC.xaml.cs">
+    <Compile Include="UCs\TestDataGridUC.xaml.cs">
       <DependentUpon>TestDataGridUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TestUserControl.xaml.cs">
+    <Compile Include="UCs\TestUserControl.xaml.cs">
       <DependentUpon>TestUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThemeClass.cs" />
+    <Compile Include="Class\ThemeClass.cs" />
     <Compile Include="UCs\UnitsUC.xaml.cs">
       <DependentUpon>UnitsUC.xaml</DependentUpon>
     </Compile>
-    <Page Include="AuthorizationWindow.xaml">
+    <Page Include="Windows\AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -137,7 +137,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -145,14 +145,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AuthorizationWindow.xaml.cs">
+    <Compile Include="Windows\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NewEquipment.xaml">
+    <Page Include="UCs\NewEquipment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,11 +164,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StandartDataUC.xaml">
+    <Page Include="UCs\StandartDataUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StuffStatusUC.xaml">
+    <Page Include="UCs\StuffStatusUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,11 +196,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestDataGridUC.xaml">
+    <Page Include="UCs\TestDataGridUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestUserControl.xaml">
+    <Page Include="UCs\TestUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -299,9 +299,7 @@
     <Resource Include="Assets\Icon\Done.png" />
     <Resource Include="Assets\Icon\Upgrade.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Windows\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Assets\ThemeIcon\Azalea.png" />
     <Resource Include="Assets\ThemeIcon\BananaGrape.png" />

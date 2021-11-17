@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
-        Title="Главное окно" Icon="Assets/Icon/Wafer.png" Height="720" Width="1280">
+        Title="Главное окно" Height="720" Width="1280">
     
     <Grid Background="{DynamicResource BackFirstLevel}">
         <Grid x:Name="WorkSpace">
