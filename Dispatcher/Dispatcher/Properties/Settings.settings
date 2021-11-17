@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="SqlConnectionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=DESKTOP-LEONID\SQLEXPRESS;Initial Catalog=NewDispatcher;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=192.168.1.118,1433\SQLEXPRESS;Initial Catalog=NewDispatcher;Persist Security Info=True;User ID=Admin;Password=Admin</Value>
     </Setting>
     <Setting Name="ThemeSettings" Type="System.String" Scope="User">
       <Value Profile="(Default)">Business</Value>

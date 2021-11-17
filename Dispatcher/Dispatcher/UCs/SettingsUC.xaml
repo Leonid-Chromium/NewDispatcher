@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="Dispatcher.SettingsUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dispatcher"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid Background="{DynamicResource BackFirstLevel}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Button Grid.Column="0" Grid.Row="0"
+                Content="Назад" Margin="10"  Height="40"
+                Click="Button_Click"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button x:Name="ThemeButton"
+                    Content="Темы" Margin="10" Height="40"
+                    Click="ThemeButton_Click"/>
+            <Button x:Name="StyleButton"
+                    Content="Стили" Margin="10" Height="40"
+                    Click="StyleButton_Click"/>
+            <Button x:Name="SQLButton"
+                    Content="Подключение Сервера" Margin="10" Height="40"
+                    Click="SQLButton_Click"/>
+        </StackPanel>
+
+        <Grid x:Name="Themes"
+              Grid.Column="1" Grid.RowSpan="2"
+              Visibility="Visible"
+              Background="{DynamicResource BackSecondLevel}">
+            <WrapPanel ItemHeight="280" ItemWidth="384">
+                <WrapPanel.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Margin" Value="10,10" />
+                        <Setter Property="Background" Value="{DynamicResource Tranceparent}"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background ="{TemplateBinding Background}" CornerRadius="10"
+                                            BorderThickness="2"
+                                            BorderBrush="White"
+                                            Padding="10,10">
+
+                                        <ContentPresenter HorizontalAlignment ="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </WrapPanel.Resources>
+                
+                <Button x:Name="SetDarkSide"
+                        ToolTip="Set Dark"
+                    Click="SetDarkSide_Click">
+                    <Image Source="/Assets/ThemeIcon/Dark.png" />
+                </Button>
+
+                <Button x:Name="SetLightSide"
+                        ToolTip="Set Light"
+                    Click="SetLightSide_Click">
+                    <Image Source="/Assets/ThemeIcon/Light.png" />
+                </Button>
+
+                <Button x:Name="SetAzalea"
+                    ToolTip="Set Azalea"
+                    Click="SetAzalea_Click">
+                    <Image Source="/Assets/ThemeIcon/Azalea.png" />
+                </Button>
+
+                <Button x:Name="SetBananaGrape"
+                    ToolTip="Set BananaGrape"
+                    Click="SetBananaGrape_Click">
+                    <Image Source="/Assets/ThemeIcon/BananaGrape.png" />
+                </Button>
+
+                <Button x:Name="SetBusiness"
+                    ToolTip="Set Business"
+                    Click="SetBusiness_Click">
+                    <Image Source="/Assets/ThemeIcon/Business.png" />
+                </Button>
+
+                <Button x:Name="SetHotLava"
+                    ToolTip="Set HotLava"
+                    Click="SetHotLava_Click">
+                    <Image Source="/Assets/ThemeIcon/HotLava.png" />
+                </Button>
+
+                <Button x:Name="SetInvigoratingCoffee"
+                    ToolTip="Set InvigoratingCoffee"
+                    Click="SetInvigoratingCoffee_Click">
+                    <Image Source="/Assets/ThemeIcon/Invigorating coffee.png" />
+                </Button>
+
+                <Button x:Name="SetLawn"
+                    ToolTip="Set Lawn"
+                    Click="SetLawn_Click">
+                    <Image Source="/Assets/ThemeIcon/Lawn.png" />
+                </Button>
+
+                <Button x:Name="SetSeaBreeze"
+                    ToolTip="Set SeaBreeze"
+                    Click="SetSeaBreeze_Click">
+                    <Image Source="/Assets/ThemeIcon/SeaBreeze.png" />
+                </Button>
+
+                <Button x:Name="SetStarSky"
+                    ToolTip="Set StarSky"
+                    Click="SetStarSky_Click">
+                    <Image Source="/Assets/ThemeIcon/StarSky.png" />
+                </Button>
+
+                <Button x:Name="SetSunnyBeach"
+                    ToolTip="Set SunnyBeach"
+                    Click="SetSunnyBeach_Click">
+                    <Image Source="/Assets/ThemeIcon/SunnyBeach.png" />
+                </Button>
+            </WrapPanel>
+        </Grid>
+        <Grid x:Name="SQLSet"
+              Grid.Column="1" Grid.RowSpan="2"
+              Visibility="Collapsed"
+              Background="{DynamicResource BackSecondLevel}"
+              Loaded="SQLSet_Loaded">
+            <WrapPanel Orientation="Vertical">
+                <Label Content="Data sourse"/>
+                <TextBox x:Name="dataSourseTB" TextChanged="TextChanged"/>
+                <Label Content="Initial Catalog"/>
+                <TextBox x:Name="initialCatalogTB" TextChanged="TextChanged"/>
+                <Label Content="Integrated Security"/>
+                <TextBox x:Name="integratedSecurityTB" TextChanged="TextChanged"/>
+                <TextBox x:Name="conStrTB"/>
+                <Button x:Name="setConnectString" Content="Использовать строку подключения" Click="setConnectString_Click"/>
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</UserControl>

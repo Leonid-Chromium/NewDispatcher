@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Dispatcher.NewEquipment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dispatcher"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Grid.Column="0">
+            <Button Content="Подтвердить"/>
+        </WrapPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Номер сотрудника"/>
+            <TextBox x:Name="idStuffTB"/>
+            <Label Content="Номер партии"/>
+            <TextBox x:Name="idBatchTB"/>
+            <Label Content="Колличество оставшихся пластин"/>
+            <TextBox x:Name="WaferCountTB"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

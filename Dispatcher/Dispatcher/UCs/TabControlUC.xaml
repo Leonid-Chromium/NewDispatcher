@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="Dispatcher.TabControlUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dispatcher"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <TabControl
+        x:Name="TabControlFirstLevel"
+        Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"
+        Background="{DynamicResource BackSecondLevel}"
+        HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TabItem Header="Партии" x:Name="TabBatch">
+            <local:BatchUC/>
+        </TabItem>
+        <TabItem Header="Сотрудники" x:Name="TabStuff">
+            <local:StuffsUC/>
+        </TabItem>
+        <TabItem Header="Оборудование" x:Name="TabEquipment">
+            <local:EquipmentUC/>
+        </TabItem>
+        <TabItem Header="Участки" x:Name="TabDistrict">
+            <local:DistrictUC/>
+        </TabItem>
+        <TabItem Header="Склад" x:Name="TabStore">
+            <TabControl Background="{DynamicResource BackThirdLevel}">
+                <TabItem Header="Расходники">
+                </TabItem>
+                <TabItem Header="Среды">
+
+                </TabItem>
+            </TabControl>
+        </TabItem>
+        <TabItem Header="Редакторы" x:Name="TabEditors">
+            <TabControl Background="{DynamicResource BackThirdLevel}">
+                <TabItem Header="Единицы измерения">
+                    <local:UnitsUC/>
+                </TabItem>
+                <TabItem Header="Статусы персонала">
+                    <local:StuffStatusUC/>
+                </TabItem>
+                <TabItem Header="Статусы оборудования">
+                    <local:EquipmentStatusUC/>
+                </TabItem>
+                <TabItem Header="Должности">
+                    <local:PostUC/>
+                </TabItem>
+                <TabItem Header="Тех. карты">
+                    дичь
+                </TabItem>
+                <TabItem Header="Аттестаты">
+
+                </TabItem>
+                <TabItem Header="Устройства">
+
+                </TabItem>
+            </TabControl>
+        </TabItem>
+        <TabItem Header="Test" x:Name="TabTest">
+            <TabControl>
+                <TabItem Header="Тест 1">
+                    <local:TestUserControl/>
+                </TabItem>
+                <TabItem Header="Тест 2">
+                    <local:StandartDataUC DataTable="Units"/>
+                </TabItem>
+            </TabControl>
+        </TabItem>
+    </TabControl>
+</UserControl>

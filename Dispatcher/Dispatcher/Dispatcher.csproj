@@ -65,76 +65,79 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BatchUC.xaml.cs">
+    <Compile Include="UCs\BatchUC.xaml.cs">
       <DependentUpon>BatchUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CalendarUC.xaml.cs">
+    <Compile Include="UCs\CalendarUC.xaml.cs">
       <DependentUpon>CalendarUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DistrictUC.xaml.cs">
+    <Compile Include="UCs\DistrictUC.xaml.cs">
       <DependentUpon>DistrictUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EquipmentStatusUC.xaml.cs">
+    <Compile Include="UCs\EquipmentStatusUC.xaml.cs">
       <DependentUpon>EquipmentStatusUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EquipmentUC.xaml.cs">
+    <Compile Include="UCs\EquipmentUC.xaml.cs">
       <DependentUpon>EquipmentUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PostUC.xaml.cs">
+    <Compile Include="UCs\NewEquipment.xaml.cs">
+      <DependentUpon>NewEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCs\PostUC.xaml.cs">
       <DependentUpon>PostUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
-    <Compile Include="SettingsUC.xaml.cs">
+    <Compile Include="Class\Settings.cs" />
+    <Compile Include="UCs\SettingsUC.xaml.cs">
       <DependentUpon>SettingsUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SQLClass.cs" />
-    <Compile Include="StandartDataUC.xaml.cs">
+    <Compile Include="Class\SQLClass.cs" />
+    <Compile Include="UCs\StandartDataUC.xaml.cs">
       <DependentUpon>StandartDataUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StuffStatusUC.xaml.cs">
+    <Compile Include="UCs\StuffStatusUC.xaml.cs">
       <DependentUpon>StuffStatusUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StuffsUC.xaml.cs">
+    <Compile Include="UCs\StuffsUC.xaml.cs">
       <DependentUpon>StuffsUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TabControlUC.xaml.cs">
+    <Compile Include="UCs\TabControlUC.xaml.cs">
       <DependentUpon>TabControlUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TestDataGridUC.xaml.cs">
+    <Compile Include="UCs\TestDataGridUC.xaml.cs">
       <DependentUpon>TestDataGridUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TestUserControl.xaml.cs">
+    <Compile Include="UCs\TestUserControl.xaml.cs">
       <DependentUpon>TestUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThemeClass.cs" />
-    <Compile Include="UnitsUC.xaml.cs">
+    <Compile Include="Class\ThemeClass.cs" />
+    <Compile Include="UCs\UnitsUC.xaml.cs">
       <DependentUpon>UnitsUC.xaml</DependentUpon>
     </Compile>
-    <Page Include="AuthorizationWindow.xaml">
+    <Page Include="Windows\AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BatchUC.xaml">
+    <Page Include="UCs\BatchUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CalendarUC.xaml">
+    <Page Include="UCs\CalendarUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DistrictUC.xaml">
+    <Page Include="UCs\DistrictUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EquipmentStatusUC.xaml">
+    <Page Include="UCs\EquipmentStatusUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EquipmentUC.xaml">
+    <Page Include="UCs\EquipmentUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -142,30 +145,34 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AuthorizationWindow.xaml.cs">
+    <Compile Include="Windows\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PostUC.xaml">
+    <Page Include="UCs\NewEquipment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SettingsUC.xaml">
+    <Page Include="UCs\PostUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StandartDataUC.xaml">
+    <Page Include="UCs\SettingsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StuffStatusUC.xaml">
+    <Page Include="UCs\StandartDataUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StuffsUC.xaml">
+    <Page Include="UCs\StuffStatusUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCs\StuffsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,15 +192,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TabControlUC.xaml">
+    <Page Include="UCs\TabControlUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestDataGridUC.xaml">
+    <Page Include="UCs\TestDataGridUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestUserControl.xaml">
+    <Page Include="UCs\TestUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -241,7 +248,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UnitsUC.xaml">
+    <Page Include="UCs\UnitsUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

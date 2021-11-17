@@ -25,8 +25,8 @@ namespace Dispatcher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-LEONID\\SQLEXPRESS;Initial Catalog=NewDispatcher;Integrated Se" +
-            "curity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.118,1433\\SQLEXPRESS;Initial Catalog=NewDispatcher;Persist S" +
+            "ecurity Info=True;User ID=Admin;Password=Admin")]
         public string SqlConnectionString {
             get {
                 return ((string)(this["SqlConnectionString"]));
