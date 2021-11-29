@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\App.xaml
-32-1343232993
+332048110748
 
-241088184445
+25357181091
 182071080061
-Windows\AuthorizationWindow.xaml;UCs\BatchUC.xaml;UCs\CalendarUC.xaml;UCs\DistrictUC.xaml;UCs\EquipmentStatusUC.xaml;UCs\EquipmentUC.xaml;Windows\MainWindow.xaml;UCs\NewEquipment.xaml;UCs\PostUC.xaml;UCs\SettingsUC.xaml;UCs\StandartDataUC.xaml;UCs\StuffStatusUC.xaml;UCs\StuffsUC.xaml;Style\Artem.xaml;Style\CalendarStyle.xaml;Style\Round.xaml;Style\TabItemStyle.xaml;UCs\TabControlUC.xaml;UCs\TestDataGridUC.xaml;UCs\TestUserControl.xaml;Theme\Azalea.xaml;Theme\BananaGrape.xaml;Theme\Business.xaml;Theme\Dark.xaml;Theme\HotLava.xaml;Theme\InvigoratingCoffee.xaml;Theme\Lawn.xaml;Theme\Light.xaml;Theme\SeaBreeze.xaml;Theme\StarSky.xaml;Theme\SunnyBeach.xaml;UCs\UnitsUC.xaml;
+UCs\UniversalDataGrid.xaml;Windows\AuthorizationWindow.xaml;UCs\BatchUC.xaml;UCs\CalendarUC.xaml;UCs\DistrictUC.xaml;UCs\EquipmentStatusUC.xaml;UCs\EquipmentUC.xaml;Windows\MainWindow.xaml;UCs\NewEquipment.xaml;UCs\PostUC.xaml;UCs\SettingsUC.xaml;UCs\StandartDataUC.xaml;UCs\StuffStatusUC.xaml;UCs\StuffsUC.xaml;Style\Artem.xaml;Style\CalendarStyle.xaml;Style\Round.xaml;Style\TabItemStyle.xaml;UCs\TabControlUC.xaml;UCs\TestDataGridUC.xaml;UCs\TestUserControl.xaml;Theme\Azalea.xaml;Theme\BananaGrape.xaml;Theme\Business.xaml;Theme\Dark.xaml;Theme\HotLava.xaml;Theme\InvigoratingCoffee.xaml;Theme\Lawn.xaml;Theme\Light.xaml;Theme\SeaBreeze.xaml;Theme\StarSky.xaml;Theme\SunnyBeach.xaml;UCs\UnitsUC.xaml;
 
 False
 

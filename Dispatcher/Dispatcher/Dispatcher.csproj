@@ -113,6 +113,10 @@
     <Compile Include="UCs\UnitsUC.xaml.cs">
       <DependentUpon>UnitsUC.xaml</DependentUpon>
     </Compile>
+    <Page Include="UCs\UniversalDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +148,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UCs\UniversalDataGrid.xaml.cs">
+      <DependentUpon>UniversalDataGrid.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>

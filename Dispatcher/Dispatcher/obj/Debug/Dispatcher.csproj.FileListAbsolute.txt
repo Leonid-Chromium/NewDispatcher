@@ -67,3 +67,5 @@ D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UCs\StandartDataUC.
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UCs\StuffStatusUC.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UCs\TestDataGridUC.baml
 D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UCs\TestUserControl.baml
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UCs\UniversalDataGrid.g.cs
+D:\File\GitHub\NewDispatcher\Dispatcher\Dispatcher\obj\Debug\UCs\UniversalDataGrid.baml
