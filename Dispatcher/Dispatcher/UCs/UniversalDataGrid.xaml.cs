@@ -23,6 +23,8 @@ namespace Dispatcher.UCs
     {
         public string sqlTable { get; set; }
 
+        public string sqlSelect { get; set; }
+
         public string[] valueName { get; set; }
         public string[] value { get; set; }
 
@@ -58,29 +60,36 @@ namespace Dispatcher.UCs
         private void dataGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
             Trace.WriteLine("dataGrid_RowEditEnding");
-            SQLClass.NoReturnSQL(String.Format("INSERT INTO Batchs({0}) VALUES ({1})", String.Join(", ", valueName), String.Join(", ", value)));
+            //SQLClass.NoReturnSQL(String.Format("INSERT INTO Batchs({0}) VALUES ({1})", String.Join(", ", valueName), String.Join(", ", value)));
         }
 
         private void dataGrid_Loaded(object sender, RoutedEventArgs e)
         {
+            if (String.IsNullOrEmpty(sqlSelect))
+            {
+                Trace.WriteLine("sqlSelect is null");
+            }
+            else
+            {
+                Trace.WriteLine("sqlSelect is not null");
+            }
 
             Trace.WriteLine("Сейчас будет боль");
-            Trace.WriteLine(sqlTable);
+            Trace.WriteLine(String.Format("sqlSelect = " + sqlSelect));
+            Trace.WriteLine(String.Format("sqlTable" + sqlTable));
 
-            Trace.WriteLine(String.Format("valueName = ", String.Join(", ", valueName)));
+            //Trace.WriteLine(String.Format("valueName = ", String.Join(", ", valueName)));
 
-            SQLClass.ReturnSQL(dataGrid, String.Format("SELECT " + String.Join(", ", valueName) + " From " + sqlTable));
+            SQLClass.ReturnSQL(dataGrid, sqlSelect);
         }
 
         private void dataGrid_AddingNewItem(object sender, AddingNewItemEventArgs e)
         {
-
             Trace.WriteLine("dataGrid_AddingNewItem");
         }
 
         private void dataGrid_InitializingNewItem(object sender, InitializingNewItemEventArgs e)
         {
-
             Trace.WriteLine("dataGrid_InitializingNewItem");
         }
     }

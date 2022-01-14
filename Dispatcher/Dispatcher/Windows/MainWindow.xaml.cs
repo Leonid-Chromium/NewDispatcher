@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dispatcher.UCs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace Dispatcher
         public MainWindow()
         {
             InitializeComponent();
+
+
+            UniversalDataGrid universalDataGrid = new UniversalDataGrid();
+            universalDataGrid.sqlSelect = "SELECT * From Batchs";
+            TabControlUC tabControlUC = TabSpace;
+            tabControlUC.UDG.Content = universalDataGrid;
+
         }
 
         public static int role{get; set;}

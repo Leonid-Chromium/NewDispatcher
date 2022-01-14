@@ -106,6 +106,9 @@
     <Compile Include="UCs\TestDataGridUC.xaml.cs">
       <DependentUpon>TestDataGridUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UCs\TestUC.xaml.cs">
+      <DependentUpon>TestUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UCs\TestUserControl.xaml.cs">
       <DependentUpon>TestUserControl.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
     <Compile Include="UCs\UnitsUC.xaml.cs">
       <DependentUpon>UnitsUC.xaml</DependentUpon>
     </Compile>
+    <Page Include="UCs\TestUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UCs\UniversalDataGrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
