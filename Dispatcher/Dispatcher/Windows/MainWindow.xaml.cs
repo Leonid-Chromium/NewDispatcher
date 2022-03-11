@@ -28,12 +28,12 @@ namespace Dispatcher
 
             UniversalDataGrid universalDataGrid = new UniversalDataGrid();
             universalDataGrid.sqlSelect = "SELECT * From Batchs";
-            TabControlUC tabControlUC = TabSpace;
+            UCs.TabControlUC tabControlUC = TabSpace;
             tabControlUC.UDG.Content = universalDataGrid;
 
         }
 
-        public static int role{get; set;}
+        public static int role {get; set;}
 
         public void SetRole(int newRole)
         {

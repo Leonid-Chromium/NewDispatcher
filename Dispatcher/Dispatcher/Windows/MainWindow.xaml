@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dispatcher"
+        xmlns:localUC="clr-namespace:Dispatcher.UCs"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
@@ -39,7 +40,7 @@
                         Width="50" Margin="25"
                         Background="{DynamicResource FrontThirdLevel}"/>-->
             </Grid>
-            <local:TabControlUC x:Name="TabSpace" Grid.Column="2" Grid.RowSpan="3"/>
+            <localUC:TabControlUC x:Name="TabSpace" Grid.Column="2" Grid.RowSpan="3"/>
         </Grid>
         <local:SettingsUC x:Name="Settings" Visibility="Collapsed"/>
     </Grid>
